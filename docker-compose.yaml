@@ -13,18 +13,12 @@ services:
       dockerfile: .docker/Dockerfile
     depends_on:
       - airline-db
-    volumes:
-      - ".:/home/airline/airline"
-      - "./.docker/data/init.sh:/home/airline/init-data.sh"
-      - "./.docker/data/start.sh:/home/airline/start-data.sh"
-      - "./.docker/web/start.sh:/home/airline/start-web.sh"
-      - "./.docker/web/clean.sh:/home/airline/clean-web.sh"
     environment:
       DB_HOST: airline-db
       ES_HOST: airline-search
     entrypoint: ["tail", "-f", "/dev/null"]
-#    ports:
-#      - "9000:9000"
+    ports:
+      - "9000:9000"
     healthcheck:
       test: curl --fail http://localhost:9000/ || exit 1
       interval: 10s
@@ -44,8 +38,8 @@ services:
       MYSQL_CHARACTER_SET: utf8mb4
       MYSQL_COLLATE: utf8mb4_unicode_ci
       ALLOW_EMPTY_PASSWORD: yes
-#    ports:
-#      - "3306:3306"
+    ports:
+      - "33063:3306"
     volumes:
       - "mysql-data:/var/lib/mysql"
     networks:
@@ -56,5 +50,6 @@ services:
     container_name: airline-search
     environment:
       discovery.type: single-node
+      ES_JAVA_OPTS: "-Xms1g -Xmx4g"
     networks:
       - airline

@@ -3,10 +3,10 @@ FROM ubuntu:22.04 AS base
 RUN apt-get update \
     && apt-get upgrade --yes \
     && apt-get install --yes openjdk-11-jdk \
-        curl \
-        screen \
-        nano \
-        sudo
+    curl \
+    screen \
+    nano \
+    sudo
 
 RUN groupadd -r -g 1000 airline \
     && useradd -u 1000 -r -g 1000 -d /home/airline airline \
@@ -15,6 +15,12 @@ RUN groupadd -r -g 1000 airline \
 RUN mkdir -p /home/airline/bin \
     && chown -vR airline:airline /home/airline \
     && chmod -vR 755 /home/airline
+
+COPY --chown=airline:airline airline-data /home/airline/airline/airline-data
+COPY --chown=airline:airline airline-web /home/airline/airline/airline-web
+COPY --chown=airline:airline scripts /home/airline/airline/scripts
+COPY --chown=airline:airline sbt-launch.jar /home/airline/airline/sbt-launch.jar
+
 USER airline
 ENV PATH="$PATH:/home/airline/bin"
 
