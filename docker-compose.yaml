@@ -8,7 +8,7 @@ volumes:
 services:
   airline-app:
     container_name: airline-app
-    image: airline-app:v3.1
+    image: airline-app:v3
     depends_on:
       - airline-db
     environment:
