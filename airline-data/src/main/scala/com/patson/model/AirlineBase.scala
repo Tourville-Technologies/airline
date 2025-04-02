@@ -46,9 +46,11 @@ case class AirlineBase(airline : Airline, airport : Airport, countryCode : Strin
 
   val delegatesRequired = {
     if (headquarter) {
-      Math.max(0, Math.ceil(scale.toDouble / 2) - 1)
+      Math.max(0, Math.ceil(scale.toDouble / 5) - 1)
+    } else if (airport.isDomesticAirport()) {
+      Math.ceil(scale.toDouble / 4)
     } else {
-      Math.ceil(scale.toDouble / 2)
+      Math.ceil(scale.toDouble / 3)
     }
   }.toInt
 
