@@ -26,14 +26,10 @@ Live at https://myfly.club/
 
 ## Alternate Docker Setup
 1. Install Docker & Docker-compose
-1. run `cp docker-compose.override.yaml.dist docker-compose.override.yaml` and then edit the new file with your preferred ports. Mysql only has to have exposed ports if you like to connect from outside docker
-   1. If you plan to use this anything else than for development, adjust the credentials via environment variables
-2. start the stack with `docker compose up -d` and confirm both containers are running
-3. open a shell inside the container via `docker compose exec airline-app bash`
-4. run the init scripts:
-   1. `sh init-data.sh` (might need to run it a couple of times because migration seems to be spotty)
-5. To boot up both front and backend, use the start scripts `sh start-data.sh` and `sh start-web.sh` in separate sessions
-6. The application should be accessible at your hosts ip address and port 9000. If docker networks aren't limited by firewalls or network settings, it should be available without any reverse-proxying. (Dev only!)
+2. run `cp docker-compose.override.yaml.dist docker-compose.override.yaml` and then edit the new file with your preferred ports. Mysql only has to have exposed ports if you like to connect from outside docker. **If you plan to use this anything else than for development, adjust the credentials via environment variables**
+3. start the stack with `docker compose up -d` and confirm both containers are running
+4. run the init script for the database `docker compose exec airline-backend sh /home/airline/airline/scripts/data/migrate.sh`
+5. The application should be accessible at your hosts ip address and port 9000. If docker networks aren't limited by firewalls or network settings, it should be available without any reverse-proxying. (Dev only!)
 
 
 ## Nginx Proxy w/ Cloudflare HTTPS
