@@ -1017,9 +1017,9 @@
 				<div id="linksCanvas"  class="canvas" style="display: none; height: 100%;">
 					<div class="mainPanel">
 						<div class="section tight">
-							<div style="height: 20px; text-align: left;">
-								<img src='@routes.Assets.versioned("images/icons/clock-frame.png")' class="button" title="Sort by last updated" onclick="toggleLinksTableSortOrder($('#hiddenLinkSortBy'))" style="vertical-align: text-bottom">
-								<img src='@routes.Assets.versioned("images/icons/funnel.png")' class="button" title="Show / Hide Filter Row" onclick="toggleLinksTableFilterRow()" style="vertical-align: text-bottom">
+							<div class="no-highlight">
+								<a class="px-2 py-1 inline-block" title="Sort by last updated" onclick="toggleLinksTableSortOrder($('#hiddenLinkSortBy'))"><img src='@routes.Assets.versioned("images/icons/clock-frame.png")' style="vertical-align: text-bottom" class="button"></a>
+								<a class="px-2 py-1 inline-block" title="Show / Hide Filter Row" onclick="toggleLinksTableFilterRow()"><img src='@routes.Assets.versioned("images/icons/funnel.png")' style="vertical-align: text-bottom" class="button"></a>
 							</div>
 								<div class="table-container-x">
 									<div class="table data" style="min-width: 920px; height: 20px;">
@@ -1178,7 +1178,7 @@
 								  <div class="i-label"><span class="airportCountryName">Country</span> Gini
 									  <div class="tooltip">
 										  <img class="info svg" src='@routes.Assets.versioned("images/icons/information.svg")'>
-										  <span class="tooltiptext alignLeft" style="width: 400px;">
+										  <span class="tooltiptext" style="width: 400px;">
 											  <p><b>Gini coefficient</b> is a common measure of inequality. In-game,
 												population, income, and inequality is applied to determine how much of
 												each airport is low, middle, and extremely-high income.</p>
@@ -1211,53 +1211,48 @@
 									  <p class="airlineTitle titleCue"></p>
 								  </div>
 							  </div>
-							  <div class="item">
-								  <div class="i-label">Delegates Required</div>
-								  <div class="i-value inline-icons">
-									  <span id="airportDetailsBaseDelegatesRequired"></span>
-									  <img src='@routes.Assets.versioned("images/icons/gear.png")' title='Manage Relationship'
+								<div class="item">
+									<div class="i-label">Delegates Required</div>
+									<div class="i-value inline-icons">
+										<span id="airportDetailsBaseDelegatesRequired"></span>
+										<img src='@routes.Assets.versioned("images/icons/gear.png")' title='Manage Relationship'
 										   class="clickable detailsIcon openCountryRelationship"
 										   onclick="showRelationshipDetailsModal($(this).data('relationship'), $(this).data('title'), $(this).data('countryCode'), function(){ showAirportDetails(activeAirportId) })"
 										   >
-								  </div>
-							  </div>
-							  <div class="item">
-								  <div class="i-label">Facilities</div>
-								  <div class="i-value" id="airportDetailsFacilities"></div>
-							  </div>
-							  <!-- <div class="item">
-								  <div class="i-label upgradeCostLabel">Upgrade Cost</div>
-								  <div class="i-value" id="airportDetailsBaseUpgradeCost"></div>
-							  </div>
-							  <div class="item">
-								  <div class="i-label">Base Upkeep after upgrade</div>
-								  <div class="i-value" id="airportDetailsBaseUpgradeUpkeep"></div>
-							  </div> -->
-							  <div class="item">
-								  <div class="i-label">Airport Loyalty
+									</div>
+								</div>
+								<div class="item">
+									<div class="i-label">Facilities</div>
+									<div class="i-value" id="airportDetailsFacilities"></div>
+								</div>
+								<div class="item">
+									<div class="i-label">Airport Loyalty
 										<img src='@routes.Assets.versioned("images/icons/gear.png")' class="clickable campaignGear"
-											 width="16"
-											 height="16"
-											 onclick="showCampaignModal()"
-											 title="View/Edit Campaigns"
-											 style="vertical-align:text-bottom"/>
-									  <img src='@routes.Assets.versioned("images/icons/information.svg")'
-										   class="svg info clickable airportLoyaltyBonusTrigger" style="vertical-align:text-bottom"
-										   onmouseover="showAppealBreakdown($(this), $('#appealBonusDetailsTooltip').data('loyaltyBreakdown'))"
-										   onmouseout="hideAppealBreakdown()">
-								  </div>
-							  </div>
-							  <div class="item">
-								  <div class="i-label">Staff required / capacity</div>
-								  <div class="i-value" style="display: flex; align-items: center;">
-									  <span id="airportDetailsStaff"></span>
-									  <span class="tooltip" onmouseover="showBaseDetailsModal()">
-										  <img class="info svg" src='@routes.Assets.versioned("images/icons/information.svg")'>
-										  <span class="tooltiptext below alignLeft" style="width: 400px;"></span>
-									  </span>
-								  </div>
-							  </div>
-						  </div>
+											width="16"
+											height="16"
+											onclick="showCampaignModal()"
+											title="View/Edit Campaigns"
+											style="vertical-align:text-bottom"/>
+									    <img src='@routes.Assets.versioned("images/icons/information.svg")'
+											class="svg info clickable airportLoyaltyBonusTrigger" style="vertical-align:text-bottom"
+											onmouseover="showAppealBreakdown($(this), $('#appealBonusDetailsTooltip').data('loyaltyBreakdown'))"
+											onmouseout="hideAppealBreakdown()"/>
+									</div>
+									<div class="i-value airportLoyalty">
+								    	<span id="airportDetailsLoyalty"></span><span class="airportLoyaltyBonus"></span>
+								  	</div>
+								</div>
+								<div class="item">
+									<div class="i-label">Staff required / capacity</div>
+									<div class="i-value" style="display: flex; align-items: center;">
+										<span id="airportDetailsStaff"></span>
+										<span class="tooltip" onmouseover="showBaseDetailsModal()">
+											<img class="info svg" src='@routes.Assets.versioned("images/icons/information.svg")'>
+											<span class="tooltiptext below alignLeft" style="width: 400px;"></span>
+										</span>
+									</div>
+								</div>
+							</div>
 						  <button type="button" class="button ml-0" id="buildHeadquarterButton" style="display: none;"
 								  onclick='selectHeadquarters(activeAirportId)'>Build Headquarters</button>
 						  <button type="button" class="button ml-0" id="buildBaseButton" style="display: none;"
@@ -1535,7 +1530,7 @@
 								<div class="value" id="countryDetailsName"></div>
 							</div>
 							<div class="table-row">
-								<div class="label">Income Level:</div>
+								<div class="label">Airport PPP Income:</div>
 								<div class="value" id="countryDetailsIncomeLevel"></div>
 							</div>
 							<div class="table-row">
@@ -2355,7 +2350,7 @@
 							</div>
 			<!--          		end income statement -->
 							<div style="display: none;" id="cashFlowSheet" class="sheet">
-								<div id="totalCashFlowChart" style="height: 300px; margin: 0 auto;"></div>
+								<div id="totalCashFlowChart" style="height: 280px; margin: 0 auto;"></div>
 								<div style="display: flex; flex-wrap: wrap;">
 									<div class="table data rounded-none" style="min-width: 200px">
 										<h4>Total Cash Flow</h4>
@@ -2408,6 +2403,8 @@
 										</div>
 									</div>
 								</div>
+								<h4 class="px-5">Total Company Assets</h4>
+								<div id="totalValueChart" style="height: 280px; margin: 0 auto;"></div>
 							</div>
 		<!--          		end cashflow sheet -->
 							<div style="width : 100%; display: none;" id="airlineStatsSheet" class="sheet">
@@ -2456,22 +2453,33 @@
 									</div>
 									<div class="item">
 										<div class="i-label">Revenue Available<br>Seat km</div>
-										<div class="i-value RASK"></div>
+										<div class="i-value">¢<span class="RASK"></span></div>
 									</div>
 									<div class="item">
-										<div class="i-label">Cost Available<br>Seat km</div>
-										<div class="i-value CASK"></div>
+										<div class="i-label">Cost Available<br>Seat km<div class="tooltip">
+											<img src="/assets/images/icons/information.svg">
+											<div class="tooltiptext below" style="width: 280px;">
+												<p>Includes all flights expenses except fuel taxes, and includes base upkeep & base overtime cost.</p>
+												<p><i>RASK is our standard metric for comparing two airlines' costs, regardless of their reputation.</i></p>
+											</div>
+										</div></div>
+										<div class="i-value">¢<span class="CASK"></span></div>
 									</div>
 									<div class="item">
 										<div class="i-label">Satisfaction</div>
-										<div class="i-value satisfaction"></div>
+										<div class="i-value"><span class="satisfaction"></span>%</div>
 									</div>
 									<div class="item">
 										<div class="i-label">Load Factor</div>
 										<div class="i-value loadFactor"></div>
 									</div>
 									<div class="item">
-										<div class="i-label">On-Time Performance</div>
+										<div class="i-label">On-Time Performance<div class="tooltip">
+											<img src="/assets/images/icons/information.svg">
+											<div class="tooltiptext below" style="width: 280px;">
+												<p>On-time performance is modified by the average age of your fleet and whether you have maintenance hangars.</p>
+											</div>
+										</div></div>
 										<div class="i-value onTime"></div>
 									</div>
 									<div class="divider"></div>
@@ -2494,11 +2502,11 @@
 									</div>
 									<div class="item">
 										<div class="i-label">Fleet condition</div>
-										<div class="i-value fleetCondition"></div>
+										<div class="i-value"><span class="fleetCondition"></span>%</div>
 									</div>
 									<div class="item">
 										<div class="i-label">Fleet Utilization</div>
-										<div class="i-value fleetUtilization"></div>
+										<div class="i-value"><span class="fleetUtilization"></span>%</div>
 									</div>
 									
 								</div>
@@ -2546,7 +2554,7 @@
 					</div>
 <!-- end left section  -->
 					<div class="vertical-group officeCanvasRightGroup">
-						<div class="section">
+						<div class="section py-0">
 							<textarea id="airlineNotes" style="width:99%;" placeholder="Add notes here..."></textarea>
 						</div>
 						<div class="section">
@@ -2945,12 +2953,12 @@
 								<div class="cell" style="width: 8%" align="right">Prize</div>
 							</div>
 						</div>
-						<div class="table data section tight rankingTable" id="stockRank">
+						<div class="table data section tight rankingTable" id="codeshareCountRank">
 							<div class="table-header">
 								<div class="cell" style="width: 7%">Rank</div>
 								<div class="cell" style="width: 9%">Change</div>
-								<div class="cell" style="width: 50%">Best Capitalist</div>
-								<div class="cell" style="width: 27%" align="right">Stock Price</div>
+								<div class="cell" style="width: 50%">Most Codeshares</div>
+								<div class="cell" style="width: 27%" align="right">Codeshares</div>
 								<div class="cell" style="width: 8%" align="right">Prize</div>
 							</div>
 						</div>
@@ -2972,15 +2980,15 @@
 								<div class="cell" style="width: 8%" align="right">Prize</div>
 							</div>
 						</div>
-<!--						<div class="table data section tight rankingTable" id="passengerMileQualityRank">-->
-<!--							<div class="table-header">-->
-<!--								<div class="cell" style="width: 7%">Rank</div>-->
-<!--								<div class="cell" style="width: 9%">Change</div>-->
-<!--								<div class="cell" style="width: 50%">Highest Average Quality</div>-->
-<!--								<div class="cell" style="width: 27%" align="right">Quality per pax km</div>-->
-<!--								<div class="cell" style="width: 8%" align="right">Prize</div>-->
-<!--							</div>-->
-<!--						</div>-->
+						<div class="table data section tight rankingTable" id="passengerMileQualityRank">
+							<div class="table-header">
+								<div class="cell" style="width: 7%">Rank</div>
+								<div class="cell" style="width: 9%">Change</div>
+								<div class="cell" style="width: 50%">Most Luxurious</div>
+								<div class="cell" style="width: 27%" align="right">Quality <small>by pax km</small></div>
+								<div class="cell" style="width: 8%" align="right">Prize</div>
+							</div>
+						</div>
 						<div class="table data section tight rankingTable" id="loungeRank">
 							<div class="table-header">
 								<div class="cell" style="width: 7%">Rank</div>
@@ -3068,6 +3076,15 @@
 								<div class="cell" style="width: 9%">Change</div>
 								<div class="cell" style="width: 58%">Low Income Champion</div>
 								<div class="cell" style="width: 25%" align="right">Airports<br><small>$10k income or less</small></div>
+								<div class="cell" style="width: 8%" align="right">Prize</div>
+							</div>
+						</div>
+						<div class="table data section tight rankingTable" id="airlineProfitMarginRank">
+							<div class="table-header">
+								<div class="cell" style="width: 7%">Rank</div>
+								<div class="cell" style="width: 9%">Change</div>
+								<div class="cell" style="width: 58%">Highest Margins</div>
+								<div class="cell" style="width: 25%" align="right">Profit Margin</div>
 								<div class="cell" style="width: 8%" align="right">Prize</div>
 							</div>
 						</div>
@@ -3908,7 +3925,7 @@
 											  <div class="value population" style="text-align:right;  padding-right: 10px;"></div>
 										  </div>
 										  <div class="table-row">
-											  <div class="label">Income Level</div>
+											  <div class="label">Income <small>Per Capita, PPP</small></div>
 											  <div class="value incomeLevel" style="text-align:right; padding-right: 10px;"></div>
 										  </div>
 									  </div>
@@ -3922,7 +3939,7 @@
 											  <div class="value from population" style="text-align:right; padding-right: 10px;"></div>
 										  </div>
 										  <div class="table-row">
-											  <div class="label">Income Level</div>
+											  <div class="label">Income <small>Per Capita, PPP</small></div>
 											  <div class="value from incomeLevel" style="text-align:right; padding-right: 10px;"></div>
 										  </div>
 									  </div>
@@ -3948,26 +3965,7 @@
 								  <div class="table-row">
 									  <p class="label" style="width:50%">Direct Demand</p>
 									  <div class="value" style="width:50%">
-										  <div style="text-align: right">
-											  <span class="demand">
-											  </span>
-											  <div class="tooltip">
-												  <img class="info svg" src='@routes.Assets.versioned("images/icons/information.svg")'>
-												  <span class="tooltiptext below directDemandBreakdown" style="width: 200px;">
-														<div class="fromAirport">
-															<h4><span class="airportLabel"></span></h4>
-															<p> Traveler: <span class="travelerDemand"></span></p>
-															<p> Business: <span class="businessDemand"></span></p>
-															<p> Tourist: <span class="touristDemand"></span></p>
-														</div>
-														<div class="toAirport" style="margin-top: 8px;">
-															<h4><span class="airportLabel"></span></h4>
-															<p> Traveler: <span class="travelerDemand"></span></p>
-															<p> Business: <span class="businessDemand"></span></p>
-															<p> Tourist: <span class="touristDemand"></span></p>
-														</div>
-													</span>
-											  </div>
+										  <div style="text-align: right" class="demand">
 										  </div>
 									  </div>
 								  </div>
@@ -3984,8 +3982,30 @@
 									  <div class="cell" style="width: 9%;"><p>L.F.</p></div>
 								  </div>
 							  </div>
-							  <div class="linksPie" align="center"></div>
+<!--							  <div class="linksPie" align="center"></div>-->
 
+							  <h4 class="pt-4 fromDemandHeading" style="width: 100%">Demands from</h4>
+							  <p>Each week different passenger "profiles" may fly. Below is a random draw of what may be drawn. The total demand and passenger type is stable, +/- 10%.</p>
+							  <div class="table data fromDemand" style="width: 100%">
+								  <div class='table-header'>
+									  <div class="cell" style="width: 20%;"><p>Class</p></div>
+									  <div class="cell" style="width: 20%;"><p>Type</p></div>
+									  <div class="cell" style="width: 20%;"><p>Profile</p></div>
+									  <div class="cell" style="width: 15%;"><p>Target Price</p></div>
+									  <div class="cell" style="width: 15%;"><p>Estimated Demand</p></div>
+								  </div>
+							  </div>
+
+							  <h4 class="pt-4 toDemandHeading" style="width: 100%">Demands to</h4>
+							  <div class="table data toDemand" style="width: 100%">
+								  <div class='table-header'>
+									  <div class="cell" style="width: 20%;"><p>Class</p></div>
+									  <div class="cell" style="width: 20%;"><p>Type</p></div>
+									  <div class="cell" style="width: 20%;"><p>Profile</p></div>
+									  <div class="cell" style="width: 15%;"><p>Target Price</p></div>
+									  <div class="cell" style="width: 15%;"><p>Estimated Demand</p></div>
+								  </div>
+							  </div>
 						  </div>
 					  </div>
 				  </div>
@@ -4190,14 +4210,14 @@
 		</div>
     </div>
 
-	  <div style="display: none; width: 100%;" id="allianceBasePopup" class="mapPopup">
+	  <div style="display: none; width: 100%;" id="allianceBasePopup" class="mapPopup pr-2 py-2">
 		  <div class="table" style="width: 100%">
 			  <div class="table-row">
-				  <div class="label">City :</div>
+				  <div class="label">City:</div>
 				  <div class="value city" ></div>
 			  </div>
 			  <div class="table-row">
-				  <div class="label">Airport Name:</div>
+				  <div class="label">Airport:</div>
 				  <div class="value airportName"></div>
 			  </div>
 			  <div class="table-row">
@@ -4246,9 +4266,9 @@
 		  <div class="modal-content"  style="width : 400px;">
 			  <span class="close" onclick="closeModal($('#selectionModal'))">&times;</span>
 			  <div style="margin-bottom: 10px;">
-				  <img src='@routes.Assets.versioned("images/icons/32px/question.png")'><span style="font-size: 20px;">Selection</span>
+				  <img class="pr-2" width="24px" src='@routes.Assets.versioned("images/icons/question.svg")'><span style="font-size: 16px;">Selection</span>
 			  </div>
-			  <h3 class="question" style="margin-bottom: 10px;"></h3>
+			  <p class="question py-4"></p>
 			  <div class="selections">
 			  </div>
 		  </div>
@@ -5989,16 +6009,16 @@
   <link rel="preconnect" href="https://p.typekit.net" crossorigin />
   <link rel="preload" href="https://p.typekit.net" crossorigin>
   <link rel="stylesheet" href="https://use.typekit.net/plw0ulw.css">
-  <script src='@routes.Assets.versioned("javascripts/main.js?=2")'></script>
-  <script defer src='@routes.Assets.versioned("javascripts/airport.js?=5")'></script>
+  <script src='@routes.Assets.versioned("javascripts/main.js")'></script>
+  <script defer src='@routes.Assets.versioned("javascripts/airport.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/airport-asset.js")'></script>
-  <script src='@routes.Assets.versioned("javascripts/airplane.js?=5")'></script>
-  <script src='@routes.Assets.versioned("javascripts/model-configuration.js?=5")'></script>
-  <script src='@routes.Assets.versioned("javascripts/airline.js?=5")'></script>
+  <script src='@routes.Assets.versioned("javascripts/airplane.js")'></script>
+  <script src='@routes.Assets.versioned("javascripts/model-configuration.js")'></script>
+  <script src='@routes.Assets.versioned("javascripts/airline.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/link-history.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/delegate.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/country.js")'></script>
-  <script src='@routes.Assets.versioned("javascripts/office.js?=5")'></script>
+  <script src='@routes.Assets.versioned("javascripts/office.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/tiles.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/ranking.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/bank.js")'></script>
@@ -6007,7 +6027,7 @@
   <script src='@routes.Assets.versioned("javascripts/alliance.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/log.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/event.js")'></script>
-  <script src='@routes.Assets.versioned("javascripts/search.js?=1")'></script>
+  <script src='@routes.Assets.versioned("javascripts/search.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/facility.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/departures.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/gadgets.js")'></script>
@@ -6031,7 +6051,7 @@
   <script src='@routes.Assets.versioned("javascripts/ui-theme.js")'></script>
   <script src='@routes.Assets.versioned("javascripts/table-utils.js")'></script>
 
-  <script src='@routes.Assets.versioned("javascripts/aircraft-config.umd.js?=1")' defer></script>
+  <script src='@routes.Assets.versioned("javascripts/aircraft-config.umd.js")' defer></script>
   <link rel="stylesheet" type="text/css" href='@routes.Assets.versioned("stylesheets/index-CKPGaino.css")'>
 
 

@@ -429,8 +429,6 @@ class LinkApplication @Inject()(cc: ControllerComponents) extends AbstractContro
 
       LinkSource.saveNegotiationCoolDown(resultLink.airline, resultLink.from, resultLink.to, cycle + Link.LINK_NEGOTIATION_COOL_DOWN)
 
-
-
       if (negotiationResult.isGreatSuccess) {
         val existingCapacity = existingLink.fold(LinkClassValues.getInstance())(_.futureCapacity())
         val capacityChange = incomingLink.futureCapacity() - existingCapacity //use future capacity here
@@ -489,7 +487,7 @@ class LinkApplication @Inject()(cc: ControllerComponents) extends AbstractContro
 
   def getOvertimeCompensation(airlineId : Int) = AuthenticatedAirline(airlineId) { request =>
     val incomingLink = request.body.asInstanceOf[AnyContentAsJson].json.as[Link]
-    val incomingRelationship = request.body.asInstanceOf[AnyContentAsJson].json.\("relationship").as[Int]
+//    val incomingRelationship = request.body.asInstanceOf[AnyContentAsJson].json.\("relationship").as[Int]
     val existingListOption = LinkSource.loadFlightLinkByAirportsAndAirline(incomingLink.from.id, incomingLink.to.id, airlineId)
 
     val airline = request.user
@@ -517,19 +515,19 @@ class LinkApplication @Inject()(cc: ControllerComponents) extends AbstractContro
   }
 
 
-  def getExpectedQuality(airlineId : Int, fromAirportId : Int, toAirportId : Int, queryAirportId : Int) = AuthenticatedAirline(airlineId) { request =>
-    val expectedQualities = LinkUtil.findExpectedQuality(fromAirportId : Int, toAirportId : Int, queryAirportId : Int)
-    expectedQualities match {
-      case Some(classes) => {
-        var result = Json.obj()
-        LinkClass.values.foreach { linkClass: LinkClass =>
-          result += (linkClass.code -> JsNumber(classes(linkClass)))
-        }
-        Ok(result)
-      }
-      case None => NotFound
-    }
-  }
+//  def getExpectedQuality(airlineId : Int, fromAirportId : Int, toAirportId : Int, queryAirportId : Int) = AuthenticatedAirline(airlineId) { request =>
+//    val expectedQualities = LinkUtil.findExpectedQuality(fromAirportId : Int, toAirportId : Int, queryAirportId : Int)
+//    expectedQualities match {
+//      case Some(classes) => {
+//        var result = Json.obj()
+//        LinkClass.values.foreach { linkClass: LinkClass =>
+//          result += (linkClass.code -> JsNumber(classes(linkClass)))
+//        }
+//        Ok(result)
+//      }
+//      case None => NotFound
+//    }
+//  }
 
 //  def getAllLinks() = Action {
 //     val links = LinkSource.loadAllFlightLinks()
@@ -582,20 +580,21 @@ class LinkApplication @Inject()(cc: ControllerComponents) extends AbstractContro
         if (link.airline.id != request.user.id) {
           Forbidden
         } else {
-          getDeleteLinkRejection(link, request.user) match {
-            case Some(reason) => {
-              println("cannot delete this link: " + reason)
-              BadRequest(reason)
-            }
-            case None => {
-              val count = LinkSource.deleteLink(linkId)
-              if (count == 1) { //update airplane available minutes too
-                link.getAssignedAirplanes()
-              }
-              Ok(Json.obj("count" -> count))
-            }
+          val count = LinkSource.deleteLink(linkId)
+          if (count == 1) { //update airplane available minutes too
+            link.getAssignedAirplanes()
           }
-
+          val emptyLink = Link(link.from, link.to, link.airline, LinkClassValues(0,0,0), link.distance, LinkClassValues(0,0,0), link.rawQuality, link.duration, 0, link.flightNumber, link.id)
+          val negotiationValue = NegotiationUtil.getLinkNegotiationInfo(link.airline, emptyLink, Some(link)).finalRequirementValue
+          println(s"= negotiationValue = $negotiationValue")
+          if (negotiationValue < -1.5) {
+            val number = Math.abs(negotiationValue / 1.5).toInt
+            val cycle = CycleSource.loadCycle()
+            AirlineSource.saveAirlineModifier(link.airline.id, DelegateBoostAirlineModifier(number, 3, cycle))
+            Ok(Json.obj("count" -> count, "difficulty" -> JsNumber(negotiationValue)))
+          } else {
+            Ok(Json.obj("count" -> count))
+          }
         }
       case None =>
         NotFound
@@ -762,7 +761,7 @@ class LinkApplication @Inject()(cc: ControllerComponents) extends AbstractContro
 //          )
 //        }
 
-        val (fromDemandDetailsJson, toDemandDetailsJson) = LinkApplication.generateDemands(fromAirport, toAirport, affinity, distance, flightCategory)
+        val (fromDemandDetailsJson, toDemandDetailsJson, fromDemand, toDemand) = LinkApplication.generateDemands(fromAirport, toAirport, affinity, distance, flightCategory)
 
         val cost = if (existingLink.isEmpty) Computation.getLinkCreationCost(fromAirport, toAirport) else 0
         val quality = if (existingLink.isEmpty) 0 else existingLink.get.computedQuality()
@@ -873,10 +872,10 @@ class LinkApplication @Inject()(cc: ControllerComponents) extends AbstractContro
 
         if (existingLink.isDefined) {
           resultObject = resultObject + ("existingLink", Json.toJson(existingLink))
-          val deleteRejection = getDeleteLinkRejection(existingLink.get, request.user)
-          if (deleteRejection.isDefined) {
-            resultObject = resultObject + ("deleteRejection", Json.toJson(deleteRejection.get))
-          }
+//          val deleteRejection = getDeleteLinkRejection(existingLink.get, request.user)
+//          if (deleteRejection.isDefined) {
+//            resultObject = resultObject + ("deleteRejection", Json.toJson(deleteRejection.get))
+//          }
         }
 
         rejectionReason.foreach { reason =>
@@ -916,14 +915,9 @@ class LinkApplication @Inject()(cc: ControllerComponents) extends AbstractContro
 
     existingLink match {
       case None => //new link
-        //validate there's no existing link with opposite direction
-
-//        LinkSource.loadFlightLinkByAirportsAndAirline(toAirport.id, fromAirport.id, airline.id).foreach { _ =>
-//          return Some(("Cannot create this route as your airline already has one flying between these 2 airports"), DUPLICATED_LINK)
-//        }
 
         //validate from airport is a base
-        val base = fromAirport.getAirlineBase(airline.id) match {
+        fromAirport.getAirlineBase(airline.id) match {
           case None => return Some(("Cannot fly from this airport, this is not a base!", NO_BASE))
           case Some(base) => base
         }
@@ -932,30 +926,24 @@ class LinkApplication @Inject()(cc: ControllerComponents) extends AbstractContro
 
         if (!toAirport.isGateway() && toAirport.size <= 2 && flightCategory == FlightCategory.INTERNATIONAL ) {
           val currentTitle = CountryAirlineTitle.getTitle(toAirport.countryCode, airline)
-          val requiredTitle = Title.PRIVILEGED_AIRLINE
+          val requiredTitle = Title.ESTABLISHED_AIRLINE
           val ok = currentTitle.title.id <= requiredTitle.id //smaller value means higher title
           if (!ok) {
-            return Some("Destination airport is too small to serve international destinations.", REQUIRES_CUSTOMS)
+            return Some(s"Airline must have ${Title.description(requiredTitle)} title to make international connection to this small airport.", REQUIRES_CUSTOMS)
           }
         }
         if (!fromAirport.isGateway() && fromAirport.size <= 2 && flightCategory == FlightCategory.INTERNATIONAL) {
           val currentTitle = CountryAirlineTitle.getTitle(toAirport.countryCode, airline)
-          val requiredTitle = Title.PRIVILEGED_AIRLINE
+          val requiredTitle = Title.ESTABLISHED_AIRLINE
           val ok = currentTitle.title.id <= requiredTitle.id //smaller value means higher title
           if (!ok) {
-            return Some("Home airport is too small to serve international destinations.", REQUIRES_CUSTOMS)
+            return Some(s"Airline must have ${Title.description(requiredTitle)} title to make international connections from this small airport.", REQUIRES_CUSTOMS)
           }
         }
 
         if (fromAirport == toAirport) {
           return Some("Departure and Destination airports cannot be the same. Click and select a different destination airport.", DISTANCE)
         }
-
-        //check distance
-//        val distance = Computation.calculateDistance(fromAirport, toAirport)
-//        if (distance <= 10) {
-//          return Some("Route must be longer than 10 km", DISTANCE)
-//        }
 
         //check balance
         val cost = Computation.getLinkCreationCost(fromAirport, toAirport)
@@ -1593,11 +1581,12 @@ class LinkApplication @Inject()(cc: ControllerComponents) extends AbstractContro
     val existingLinkOption = LinkSource.loadFlightLinkByAirportsAndAirline(incomingLink.from.id, incomingLink.to.id, airlineId)
     val negotiationInfo = NegotiationUtil.getLinkNegotiationInfo(request.user, incomingLink, existingLinkOption)
 
-
-    var result = Json.obj("negotiationInfo" -> Json.toJson(negotiationInfo)(NegotiationInfoWrites(incomingLink)),
-    "delegateInfo" -> Json.toJson(request.user.getDelegateInfo()),
-    "toAirport" -> Json.toJson(incomingLink.to),
-    "fromAirport" -> Json.toJson(incomingLink.from))
+    var result = Json.obj(
+      "negotiationInfo" -> Json.toJson(negotiationInfo)(NegotiationInfoWrites(incomingLink)),
+      "delegateInfo" -> Json.toJson(request.user.getDelegateInfo()),
+      "toAirport" -> Json.toJson(incomingLink.to)(SimpleAirportWrites),
+      "fromAirport" -> Json.toJson(incomingLink.from)(SimpleAirportWrites)
+    )
 
     getNegotiationRejectionReason(request.user, incomingLink.from, incomingLink.to, existingLinkOption).foreach {
       case (reason, rejectionType) => result = result + ("rejection" -> JsString(reason))
@@ -1631,55 +1620,102 @@ object LinkApplication {
     return candidate
   }
 
-  def generateDemands(fromAirport: Airport, toAirport: Airport, affinity: Int, distance: Int, flightCategory: FlightCategory.Value): (JsArray, JsArray) = {
+  // Helper function to calculate price
+  private def calculateDemandPrice(distance: Int, flightCategory: FlightCategory.Value, linkClass: LinkClass, passengerType: PassengerType.Value, airportIncome: Int, preferenceType: FlightPreferenceType.Value): Int = {
+    val basePrice = Pricing.computeStandardPrice(distance, flightCategory, linkClass, passengerType, airportIncome)
+    val priceMultiplier = preferenceType match {
+      case FlightPreferenceType.LAST_MINUTE => DemandGenerator.PRICE_LAST_MIN_MULTIPLIER
+      case FlightPreferenceType.LAST_MINUTE_DEAL => DemandGenerator.PRICE_LAST_MIN_DEAL_MULTIPLIER
+      // case PassengerType.DISCOUNT_ECONOMY if preferenceType == ??? => DemandGenerator.PRICE_DISCOUNT_PLUS_MULTIPLIER / 3 // Example if needed later
+      case _ => 1.0
+    }
+    (basePrice * priceMultiplier).toInt
+  }
+
+  // Helper function to create the JSON object for a demand detail
+  private def createDemandJsonObject(linkClass: LinkClass, passengerType: PassengerType.Value, preferenceType: FlightPreferenceType.Value, price: Int, count: Int): JsObject = {
+    Json.obj(
+      "linkClass" -> linkClass.label,
+      "passengerType" -> PassengerType.label(passengerType),
+      "preferenceType" -> preferenceType.title,
+      "price" -> price,
+      "count" -> count
+    )
+  }
+
+  def generateDemands(fromAirport: Airport, toAirport: Airport, affinity: Int, distance: Int, flightCategory: FlightCategory.Value): (JsArray, JsArray, LinkClassValues, LinkClassValues) = {
     val fromDemand = DemandGenerator.computeDemandWithPreferencesBetweenAirports(fromAirport, toAirport, affinity, distance)
     val toDemand = DemandGenerator.computeDemandWithPreferencesBetweenAirports(toAirport, fromAirport, affinity, distance)
 
-    //group demands by passenger type and preference type
-    val fromDemandByTypeAndPreference = fromDemand.groupBy { case ((linkClass, preference, passengerType), count) =>
-      (linkClass, passengerType, preference.getPreferenceType)
-    }.view.mapValues(_.values.sum)
+    // Group demands by type and preference, summing counts
+    val fromDemandByTypeAndPreference = fromDemand.groupBy {
+      case ((linkClass, preference, passengerType), _) =>
+        (linkClass, passengerType, preference.getPreferenceType)
+    }.view.mapValues(_.values.sum).toMap
 
-    val toDemandByTypeAndPreference = toDemand.groupBy { case ((linkClass, preference, passengerType), count) =>
-      (linkClass, passengerType, preference.getPreferenceType)
-    }.view.mapValues(_.values.sum)
+    val toDemandByTypeAndPreference = toDemand.groupBy {
+      case ((linkClass, preference, passengerType), _) =>
+        (linkClass, passengerType, preference.getPreferenceType)
+    }.view.mapValues(_.values.sum).toMap
 
-    //create json arrays for the detailed demands
-    var fromDemandDetailsJson = Json.arr()
-    fromDemandByTypeAndPreference.foreach {
+    val fromDemandDetails = fromDemandByTypeAndPreference.map {
       case ((linkClass, passengerType, preferenceType), total) =>
-        val priceMultiplier = {
-          if (preferenceType == FlightPreferenceType.LAST_MINUTE) DemandGenerator.PRICE_LAST_MIN_MULTIPLIER
-          else if (preferenceType == FlightPreferenceType.LAST_MINUTE_DEAL) DemandGenerator.PRICE_LAST_MIN_DEAL_MULTIPLIER
-          else 1
+        val price = calculateDemandPrice(distance, flightCategory, linkClass, passengerType, fromAirport.income, preferenceType)
+        (price, linkClass, passengerType, preferenceType, total)
+    }.toList
+
+    // Sort by the first element of the tuple (price)
+    val sortedFromDemandDetails = fromDemandDetails.sortBy(_._1).reverse
+
+    val fromDemandJsonObjects: List[JsObject] = sortedFromDemandDetails.map {
+      case (price, linkClass, passengerType, preferenceType, total) =>
+        createDemandJsonObject(linkClass, passengerType, preferenceType, price, total)
+    }
+    val fromDemandDetailsJson = Json.toJson(fromDemandJsonObjects).as[JsArray]
+
+    val toDemandDetails = toDemandByTypeAndPreference.map {
+      case ((linkClass, passengerType, preferenceType), total) =>
+        val price = calculateDemandPrice(distance, flightCategory, linkClass, passengerType, toAirport.income, preferenceType)
+        (price, linkClass, passengerType, preferenceType, total)
+    }.toList
+
+    val sortedToDemandDetails = toDemandDetails.sortBy(_._1).reverse
+
+    val toDemandJsonObjects = sortedToDemandDetails.map {
+      case (price, linkClass, passengerType, preferenceType, total) =>
+        createDemandJsonObject(linkClass, passengerType, preferenceType, price, total)
+    }
+    val toDemandDetailsJson = Json.toJson(toDemandJsonObjects).as[JsArray]
+
+
+    val initialTotals = LinkClassValues.getInstance() // Creates LinkClassValues(0, 0, 0, 0)
+
+    val fromDemandTotals =
+      fromDemandByTypeAndPreference.foldLeft(initialTotals) {
+        case (currentTotals, ((linkClass, _, _), count)) =>
+          val countAsValues = linkClass match {
+            case DISCOUNT_ECONOMY => LinkClassValues.getInstance(discount = count)
+            case ECONOMY => LinkClassValues.getInstance(economy = count)
+            case BUSINESS => LinkClassValues.getInstance(business = count)
+            case FIRST => LinkClassValues.getInstance(first = count)
+            case _ => initialTotals // Or LinkClassValues.getInstance() - represents zero
+          }
+          currentTotals + countAsValues
+      }
+
+    val toDemandTotals = toDemandByTypeAndPreference.foldLeft(initialTotals) {
+      case (currentTotals, ((linkClass, _, _), count)) =>
+        val countAsValues = linkClass match {
+          case DISCOUNT_ECONOMY => LinkClassValues.getInstance(discount = count)
+          case ECONOMY => LinkClassValues.getInstance(economy = count)
+          case BUSINESS => LinkClassValues.getInstance(business = count)
+          case FIRST => LinkClassValues.getInstance(first = count)
+          case _ => initialTotals // Or LinkClassValues.getInstance() - represents zero
         }
-        fromDemandDetailsJson = fromDemandDetailsJson.append(Json.obj(
-          "linkClass" -> linkClass.label,
-          "passengerType" -> PassengerType.label(passengerType),
-          "preferenceType" -> preferenceType.title,
-          "price" -> (priceMultiplier * Pricing.computeStandardPrice(distance, flightCategory, linkClass, passengerType, fromAirport.income)).toInt,
-          "count" -> total
-        ))
+        currentTotals + countAsValues
     }
 
-    var toDemandDetailsJson = Json.arr()
-    toDemandByTypeAndPreference.foreach {
-      case ((linkClass, passengerType, preferenceType), total) =>
-        val priceMultiplier = {
-          if (preferenceType == FlightPreferenceType.LAST_MINUTE) DemandGenerator.PRICE_LAST_MIN_MULTIPLIER
-          else if (preferenceType == FlightPreferenceType.LAST_MINUTE_DEAL) DemandGenerator.PRICE_LAST_MIN_DEAL_MULTIPLIER
-//          else if (passengerType == DISCOUNT_ECONOMY) DemandGenerator.PRICE_DISCOUNT_PLUS_MULTIPLIER / 3 //not exactly right but close enough
-          else 1
-        }
-        toDemandDetailsJson = toDemandDetailsJson.append(Json.obj(
-          "linkClass" -> linkClass.label,
-          "passengerType" -> PassengerType.label(passengerType),
-          "preferenceType" -> preferenceType.title,
-          "price" -> priceMultiplier * Pricing.computeStandardPrice(distance, flightCategory, linkClass, passengerType, toAirport.income),
-          "count" -> total
-        ))
-    }
-    (fromDemandDetailsJson, toDemandDetailsJson)
+    (fromDemandDetailsJson, toDemandDetailsJson, fromDemandTotals, toDemandTotals)
   }
 
 }

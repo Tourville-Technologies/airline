@@ -59,11 +59,7 @@ object AirlineSimulation {
 
     println("Generating Rankings")
     //todo: pass airline stats so don't need to recalculate
-    val rankings: scala.collection.immutable.Map[RankingType.Value, List[Ranking]] = RankingLeaderboards.getRankings(true)
-    val rankingsByAirlineId = rankings.values.flatten
-      .filter(_.reputationPrize.isDefined)
-      .groupBy(_.key.asInstanceOf[Int])
-      .mapValues(_.map(_.reputationPrize.get).sum)
+    val rankingsByAirlineId = RankingLeaderboards.getAirlineReputationPrizes(true)
 
     val fuelContractsByAirlineId = OilSource.loadAllOilContracts().groupBy(contract => contract.airline.id)
     val fuelInventoryPolicyByAirlineId = OilSource.loadAllOilInventoryPolicies.map(policy => (policy.airline.id, policy)).toMap
@@ -160,7 +156,7 @@ object AirlineSimulation {
         }
         reputationBreakdowns.append(ReputationBreakdown(ReputationType.AIRPORT_LOYALIST_RANKING, reputationByAirportChampions))
 
-        val airlineTouristBonus = if (airline.airlineType == AirlineType.Discount) 2 else 1
+        val airlineTouristBonus = if (airline.airlineType == AirlineType.DISCOUNT) 2 else 1
         val reputationByTourists = 25 * airlineTouristBonus * AirlineGradeTourists.findGrade(airlineStat.tourists).level
         reputationBreakdowns.append(ReputationBreakdown(ReputationType.TOURISTS, reputationByTourists))
 
@@ -493,7 +489,7 @@ object AirlineSimulation {
           // Calculate RASK & CASK using linksIncome values & base costs and calculated ASK
           if (totalASK > 0) {
             calculatedRASK = (linksIncome.revenue).toDouble / totalASK
-            calculatedCASK = (linksIncome.expense + othersIncome.baseUpkeep + othersIncome.overtimeCompensation).toDouble / totalASK
+            calculatedCASK = (linksIncome.expense + -1 * (othersIncome.baseUpkeep + othersIncome.overtimeCompensation) + linksIncome.fuelTax).toDouble / totalASK //fuelTax is already negative
           }
 
           // Calculate Satisfaction & Load Factor averages

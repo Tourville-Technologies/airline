@@ -185,11 +185,11 @@ case class Airline(name: String, var airlineType: AirlineType.AirlineType = Airl
 
 object AirlineType extends Enumeration {
   type AirlineType = Value
-  val LEGACY, BEGINNER, NON_PLAYER, Discount, LUXURY, REGIONAL, MEGA_HQ, NOSTALGIA = Value
+  val LEGACY, BEGINNER, NON_PLAYER, DISCOUNT, LUXURY, REGIONAL, MEGA_HQ, NOSTALGIA = Value
   val label: AirlineType => String = {
     case LEGACY => "Legacy"
     case NON_PLAYER => "Non-Player"
-    case Discount => "Ultra Low-Cost"
+    case DISCOUNT => "Discount"
     case LUXURY => "Luxury"
     case REGIONAL => "Regional Partner"
     case MEGA_HQ => "Mega HQ"
@@ -200,13 +200,14 @@ object AirlineType extends Enumeration {
     case 0 => LEGACY
     case 1 => BEGINNER
     case 2 => NON_PLAYER
-    case 3 => Discount
+    case 3 => DISCOUNT
     case 4 => LUXURY
     case 5 => REGIONAL
     case 6 => MEGA_HQ
     case 7 => NOSTALGIA
     case _ => throw new IllegalArgumentException("Invalid AirlineType ID: " + id)
   }
+  val REGIONAL_EXTRA_SHARED_BASE_LIMIT = 1
   val REGIONAL_MODEL_MAX_SIZE = 0.1 //used in web app to set allowed planes
   val LUXURY_EXTRA_LOYALTY = 8
 }
@@ -475,24 +476,24 @@ object AirlineGrades {
     25 -> 0,
     50 -> 0,
     75 -> 1,
-    100 -> 2,
-    125 -> 3,
-    150 -> 4,
-    175 -> 5,
-    200 -> 6,
-    240 -> 7,
-    280 -> 8,
-    320 -> 10,
-    360 -> 14,
-    400 -> 16,
-    500 -> 18,
-    600 -> 20,
-    700 -> 22,
-    800 -> 24,
-    900 -> 26,
-    1000 -> 28,
-    1200 -> 30,
-    1400 -> 32,
+    100 -> 1,
+    125 -> 2,
+    150 -> 3,
+    175 -> 4,
+    200 -> 5,
+    240 -> 6,
+    280 -> 7,
+    320 -> 8,
+    360 -> 10,
+    400 -> 13,
+    500 -> 16,
+    600 -> 19,
+    700 -> 21,
+    800 -> 23,
+    900 -> 25,
+    1000 -> 27,
+    1200 -> 29,
+    1400 -> 31,
     1600 -> 33,
     1800 -> 34,
     2000 -> 35,

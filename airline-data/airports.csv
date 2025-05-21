@@ -17541,7 +17541,7 @@
 562355,"CAD9","heliport","Norwood Dale Field",44.526492,-79.634725,1214,"NA","CA","CA-ON","Coulson","no",,,"CAD9","CAD9",,,
 616,"CAE2","heliport","Cranbrook (East Kootenay Regional Hospital) Heliport",49.51250076293945,-115.75,3050,"NA","CA","CA-BC","Cranbrook","no",,,"CAE2","CAE2",,,"AE2"
 28187,"CAE3","seaplane_base","Campbell River Seaplane Base",50.049999,-125.25,,"NA","CA","CA-BC","Campbell River","yes",,"YHH","CAE3","CAE3",,"https://en.wikipedia.org/wiki/Campbell_River_Water_Aerodrome","AE3, Campbell River Harbour Airport"
-28465,"CAE5","seaplane_base","Whistler/Green Lake Water Aerodrome",50.1436004639,-122.948997498,2100,"NA","CA","CA-BC","Whistler","yes",,"YWS","CAE5","CAE5",,"https://en.wikipedia.org/wiki/Whistler/Green_Lake_Water_Aerodrome","AE5"
+28465,"CAE5","seaplane_base","Whistler/Green Lake Water Aerodrome",50.1436004639,-122.948997498,2100,"NA","CA","CA-BC","Whistler","no",,,"CAE5","CAE5",,"https://en.wikipedia.org/wiki/Whistler/Green_Lake_Water_Aerodrome","AE5"
 28251,"CAE7","seaplane_base","Harrison Hot Springs Seaplane Base",49.3048530057,-121.785936356,34,"NA","CA","CA-BC","Harrison Hot Springs","no",,,"CAE7","CAE7",,"https://en.wikipedia.org/wiki/Harrison_Hot_Springs_Water_Aerodrome","AE7"
 28169,"CAE9","seaplane_base","Bamfield Seaplane Base",48.835967,-125.137453,,"NA","CA","CA-BC","Bamfield","yes",,"YBF","CAE9","CAE9",,"https://en.wikipedia.org/wiki/Bamfield_Water_Aerodrome","AE9"
 320199,"CAF2","small_airport","Cayuga East Airport",42.960301,-79.788,644,"NA","CA","CA-ON","Cayuga","no",,,"CAF2","CAF2",,"https://en.wikipedia.org/wiki/Cayuga_East_Aerodrome","Skydive Ontario"
@@ -17654,7 +17654,7 @@
 28153,"CBC3","seaplane_base","Alert Bay Seaplane Base",50.583302,-126.932999,,"NA","CA","CA-BC",,"no",,,"CBC3","CBC3",,"https://en.wikipedia.org/wiki/Alert_Bay_Water_Aerodrome#","BC3"
 666,"CBC4","heliport","Kamloops (Royal Inland Hospital) Heliport",50.66903,-120.333002,1349,"NA","CA","CA-BC","Kamloops","no",,,"CBC4","CBC4",,"https://en.wikipedia.org/wiki/List_of_heliports_in_Canada#123",
 44692,"CBC6","heliport","Calgary / Blue-Con Heliport",50.996964,-113.893889,3440,"NA","CA","CA-AB","Calgary","no",,,"CBC6","CBC6",,"https://en.wikipedia.org/wiki/List_of_heliports_in_Canada#328",
-667,"CBC7","heliport","Harbour (Public) Heliport",49.286892,-123.106112,2,"NA","CA","CA-BC","Vancouver","yes",,,"CBC7","CBC7","CBC",,"BC7"
+667,"CBC7","heliport","Harbour (Public) Heliport",49.286892,-123.106112,2,"NA","CA","CA-BC","Vancouver","yes",,"CXH","CBC7","CBC7","CBC",,"BC7"
 668,"CBC8","heliport","Tofino General Hospital Heliport",49.1511,-125.908997,50,"NA","CA","CA-BC","Tofino","no",,,"CBC8","CBC8","https://www.islandhealth.ca/news/news-releases/helipad-opens-tofino-general-hospital",,
 669,"CBC9","heliport","Burgeo (Calder Health Care Corp) Heliport",47.613179191899995,-57.62399911879999,100,"NA","CA","CA-NL","Burgeo","no",,,"CBC9","CBC9",,,"BC9"
 670,"CBD2","heliport","Delta (North) Heliport",49.1199607211,-123.047267944,10,"NA","CA","CA-BC","Vancouver","no",,,"CBD2","CBD2",,,"BD2"
@@ -17666,7 +17666,7 @@
 508533,"CBE6","seaplane_base","Balsam Lake (Erlandson) Water Aerodrome",44.5699,-78.8919,853,"NA","CA","CA-ON","Kirkfield","no",,,"CBE6","CBE6",,"https://en.wikipedia.org/wiki/Kirkfield/Balsam_Lake_(Erlandson)_Water_Aerodrome",
 28156,"CBE7","seaplane_base","Alliford Bay Seaplane Base",53.214717,-131.992082,,"NA","CA","CA-BC",,"no",,,"CBE7","CBE7",,"https://en.wikipedia.org/wiki/Alliford_Bay_Water_Aerodrome",
 28326,"CBE8","seaplane_base","Moose Lake Lodge Seaplane Base",53.075802,-125.401001,,"NA","CA","CA-BC","Anahim Lake","no",,,"CBE8","CBE8",,"https://en.wikipedia.org/wiki/Moose_Lake_(Lodge)_Water_Aerodrome",
-676,"CBE9","heliport","Whistler (Municipal) Heliport",50.168377378100004,-122.904754132,2116,"NA","CA","CA-BC","Whistler","no",,,"CBE9","CBE9",,,"BE9"
+676,"CBE9","heliport","Whistler (Municipal) Heliport",50.168377378100004,-122.904754132,2116,"NA","CA","CA-BC","Whistler","yes",,"YWS","CBE9","CBE9",,,"BE9"
 46602,"CBF2","small_airport","Belwood (Baird Field)",43.808333,-80.311944,1410,"NA","CA","CA-ON","East Garafraxa","no",,,"CBF2",,,"https://en.wikipedia.org/wiki/Belwood_(Baird_Field)_Aerodrome","bf2"
 508551,"CBF3","small_airport","Beeton Field",44.078368,-79.810394,787,"NA","CA","CA-ON","Beeton","no",,,"CBF3","CBF3",,,
 677,"CBF4","heliport","Mission (Public Safety) Heliport",49.132753634,-122.343615219,85,"NA","CA","CA-BC","Mission","no",,,"CBF4","CBF4",,,"BF4"
@@ -20578,7 +20578,7 @@
 1754,"CYGZ","small_airport","Grise Fiord Airport",76.425823,-82.908583,146,"NA","CA","CA-NU","Grise Fiord","yes","CYGZ","YGZ","CYGZ",,,"https://en.wikipedia.org/wiki/Grise_Fiord_Airport",
 1755,"CYHA","small_airport","Quaqtaq Airport",61.046398,-69.617798,103,"NA","CA","CA-QC","Quaqtaq","yes","CYHA","YQC","CYHA",,,"https://en.wikipedia.org/wiki/Quaqtaq_Airport","YHA"
 1756,"CYHB","small_airport","Hudson Bay Airport",52.8166999817,-102.310997009,1175,"NA","CA","CA-SK","Hudson Bay","no","CYHB","YHB","CYHB",,,"https://en.wikipedia.org/wiki/Hudson_Bay_Airport","YHB"
-28453,"CYHC","seaplane_base","Vancouver Harbour Water Aerodrome",49.291265,-123.11717,,"NA","CA","CA-BC","Vancouver","yes","CYHC","CXH","CYHC",,,"https://en.wikipedia.org/wiki/Vancouver_Harbour_Water_Aerodrome","Vancouver Coal Harbour Seaplane Base"
+28453,"CYHC","seaplane_base","Vancouver Harbour Water Aerodrome",49.291265,-123.11717,,"NA","CA","CA-BC","Vancouver","no","CYHC",,"CYHC",,,"https://en.wikipedia.org/wiki/Vancouver_Harbour_Water_Aerodrome","Vancouver Coal Harbour Seaplane Base"
 1757,"CYHD","medium_airport","Dryden Regional Airport",49.831699,-92.744202,1354,"NA","CA","CA-ON","Dryden","no","CYHD","YHD","CYHD",,,"https://en.wikipedia.org/wiki/Dryden_Regional_Airport",
 1758,"CYHE","small_airport","Hope Airport / FVRD Regional Airpark",49.368865,-121.49495,128,"NA","CA","CA-BC","Hope","no","CYHE","YHE","CYHE",,,"https://en.wikipedia.org/wiki/Hope_Aerodrome","YHE"
 1759,"CYHF","medium_airport","Hearst René Fontaine Municipal Airport",49.71419906616211,-83.68609619140625,827,"NA","CA","CA-ON","Hearst","no","CYHF","YHF","CYHF",,,"https://en.wikipedia.org/wiki/Hearst_(Ren%C3%A9_Fontaine)_Municipal_Airport",
@@ -23568,7 +23568,7 @@
 302294,"EGLP","small_airport","Brimpton Airfield",51.383456,-1.172096,210,"EU","GB","GB-ENG","Reading, Berkshire","no",,,"EGLP",,,"https://en.wikipedia.org/wiki/Brimpton_Airfield",
 29160,"EGLS","small_airport","Old Sarum Airfield",51.0989,-1.78417,285,"EU","GB","GB-ENG","Salisbury, Wiltshire","no",,,"EGLS",,"http://www.goflyuk.com/","https://en.wikipedia.org/wiki/Old_Sarum_Airfield","RAF Old Sarum"
 29161,"EGLT","heliport","Ascot Racecourse Heliport",51.42639923095703,-0.6591669917106628,220,"EU","GB","GB-ENG","Ascot Heath","no",,,"EGLT",,,"https://en.wikipedia.org/wiki/Ascot_Racecourse_Heliport",
-43211,"EGLW","heliport","London Heliport",51.46972274779999,-0.179444000125,18,"EU","GB","GB-ENG","London","yes",,,"EGLW","GLW","http://www.londonheliport.co.uk/","https://en.wikipedia.org/wiki/London_Heliport",
+43211,"EGLW","heliport","London Heliport",51.46972274779999,-0.179444000125,18,"EU","GB","GB-ENG","London","yes",,"GLW","EGLW","GLW","http://www.londonheliport.co.uk/","https://en.wikipedia.org/wiki/London_Heliport",
 29162,"EGMA","small_airport","Fowlmere Airfield",52.077499,0.061667,124,"EU","GB","GB-ENG","Royston, Hertfordshire","no",,,"EGMA",,,"https://en.wikipedia.org/wiki/RAF_Fowlmere","RAF Fowlmere"
 2435,"EGMC","medium_airport","London Southend Airport",51.570562,0.693627,49,"EU","GB","GB-ENG","Southend-on-Sea, Essex","yes","EGMC","SEN","EGMC",,"http://www.southendairport.com/","https://en.wikipedia.org/wiki/London_Southend_Airport","RAF Rochford"
 2436,"EGMD","medium_airport","Lydd London Ashford Airport",50.956246,0.939074,13,"EU","GB","GB-ENG","Romney Marsh, Kent","no","EGMD","LYX","EGMD",,"http://www.lydd-airport.co.uk/","https://en.wikipedia.org/wiki/Lydd_Airport","London Ashford"
@@ -42167,7 +42167,7 @@
 93,"LBWB","medium_airport","Balchik Airfield",43.423801,28.181299,660,"EU","BG","BG-08","Balchik","no",,,"LBWB",,,"https://en.wikipedia.org/wiki/Balchik_Airfield","LB25"
 329116,"LBWC","small_airport","Chayka Naval Air Base",43.188139,27.848255,7,"EU","BG","BG-03","Tihina","no",,,"LBWC",,,,
 3979,"LBWN","large_airport","Varna Airport",43.232101,27.8251,230,"EU","BG","BG-03","Varna","yes","LBWN","VAR","LBWN",,,"https://en.wikipedia.org/wiki/Varna_Airport","Aksakovo"
-30979,"LCEN","medium_airport","Nicosia (Lefkoşa) Ercan International Airport",35.152337,33.506584,404,"AS","CY","CY-02","Tymbou (Kirklar)","yes","LCEN","ECN","LCEN",,,"https://en.wikipedia.org/wiki/Ercan_International_Airport","Tymvou"
+30979,"LCEN","medium_airport","Nicosia (Lefkoşa) Ercan International Airport",35.152337,33.506584,404,"AS","TR","CY-02","Tymbou (Kirklar)","yes","LCEN","ECN","LCEN",,,"https://en.wikipedia.org/wiki/Ercan_International_Airport","Tymvou"
 44646,"LCGK","medium_airport","Lefkoniko Airport / Geçitkale Air Base",35.23591,33.720088,146,"AS","CY","CY-03","Lefkoniko (Geçitkale)","yes","LCGK","GEC","LCGK",,,"https://en.wikipedia.org/wiki/Geçitkale_Air_Base","Geçitkale Air Base"
 3980,"LCLK","large_airport","Larnaca International Airport",34.875099,33.624901,8,"AS","CY","CY-04","Larnaca","yes","LCLK","LCA","LCLK",,"http://www.cyprusairports.com.cy/showpage.php?PageID=2","https://en.wikipedia.org/wiki/Larnaca_International_Airport","Διεθνές Aεροδρόμιο Λάρνακας"
 42797,"LCP","small_airport","Loncopue Airport",-38.081902,-70.643898,3627,"SA","AR","AR-Q","Loncopue","no",,"LCP",,"LCP",,,"SA18"
@@ -78846,7 +78846,7 @@
 31901,"VYMN","small_airport","Manaung Airport",18.8458,93.688904,102,"AS","MM","MM-16","Manaung","no","VYMN","MGU","VYMN",,,"https://en.wikipedia.org/wiki/Manaung_Airport",
 26731,"VYMO","medium_airport","Momeik Airport",23.092500686645508,96.64530181884766,600,"AS","MM","MM-17",,"no","VYMO","MOE","VYMO",,,,
 32610,"VYMP","small_airport","Mongpyin Airport",21.350000381469727,99.03299713134766,1516,"AS","MM","MM-17","Mongpyin","no",,,"VYMP",,,,
-26732,"VYMS","medium_airport","Mong Hsat Airport",20.516799926757812,99.25679779052734,1875,"AS","MM","MM-17","Mong Hsat","yes","VYMS","MOG","VYMS",,,"https://en.wikipedia.org/wiki/Monghsat_Airport","Monghsat Airport"
+26732,"VYMS","medium_airport","Mong Hsat Airport",20.516799926757812,99.25679779052734,1875,"AS","MM","MM-17","Mong Hsat","no","VYMS","MOG","VYMS",,,"https://en.wikipedia.org/wiki/Monghsat_Airport","Monghsat Airport"
 31897,"VYMT","small_airport","Mong Tong Airport",20.29669952392578,98.8989028930664,1840,"AS","MM","MM-17","Mong Tong","no","VYMT","MGK","VYMT",,,,
 32611,"VYMU","small_airport","Mrauk-U Airport",20.525901,93.252979,60,"AS","MM","MM-16","Mrauk-U","no",,,"VYMU",,,,
 30101,"VYMW","small_airport","Magway Airport",20.1656,94.941399,279,"AS","MM","MM-03","Magway","yes","VYMW","MWQ","VYMW",,,"https://en.wikipedia.org/wiki/Magway_Airport",
@@ -79026,7 +79026,7 @@
 41445,"WAES","small_airport","Emalamo Sanana Airport",-2.097833,125.963833,11,"AS","ID","ID-MU","Sanana","no","WAES","SQN","WAES",,,"https://en.wikipedia.org/wiki/Emalamo_Airport",
 26772,"WAEW","medium_airport","Pitu Airport",2.04599,128.324997,49,"AS","ID","ID-MU","Gotalalamo-Morotai Island","no",,"OTI","WAEW",,,"https://en.wikipedia.org/wiki/Pitu_Airport",
 352892,"WAFB","medium_airport","Toraja Airport",-3.185833,119.91775,2884,"AS","ID","ID-SS","Toraja","yes",,"TRT","WAFB",,,"https://en.wikipedia.org/wiki/Toraja_Airport",
-331735,"WAFD","small_airport","Bua - Palopo Lagaligo Airport",-3.082997,120.245018,14,"AS","ID","ID-SN","Palopo","yes",,"LLO","WAFD",,,"https://en.wikipedia.org/wiki/Bua_Airport","Palopo Lagaligo"
+331735,"WAFD","small_airport","Bua - Palopo Lagaligo Airport",-3.082997,120.245018,14,"AS","ID","ID-SN","Palopo","no",,"LLO","WAFD",,,"https://en.wikipedia.org/wiki/Bua_Airport","Palopo Lagaligo"
 26769,"WAFF","medium_airport","Mutiara - SIS Al-Jufrie Airport",-0.916462,119.908647,284,"AS","ID","ID-ST","Palu","yes","WAFF","PLW","WAFF",,,"https://en.wikipedia.org/wiki/Mutiara_Airport","WAML"
 41411,"WAFJ","small_airport","Tampa Padang Airport",-2.590017,119.025051,49,"AS","ID","ID-SR","Mamuju","no","WAFJ","MJU","WAFJ",,,"https://en.wikipedia.org/wiki/Tampa_Padang_Airport","WAAJ, WAWJ"
 41440,"WAFL","small_airport","Sultan Bantilan Airport",1.123428,120.793658,17,"AS","ID","ID-ST","Toli Toli-Celebes Island","yes",,"TLI","WAFL",,,"https://en.wikipedia.org/wiki/Sultan_Bantilan_Airport","WAMI, Toli-Toli, Tolitoli, Lalos Airport"
@@ -79038,12 +79038,12 @@
 26774,"WAFW","medium_airport","Syukuran Aminuddin Amir Airport",-1.035893,122.773934,56,"AS","ID","ID-ST","Luwok","no",,"LUW","WAFW",,,"https://en.wikipedia.org/wiki/Syukuran_Aminuddin_Amir_Airport","Bubung Airport, WAMW"
 526313,"WAFZ","small_airport","Panua Pohuwato Airport",0.461782,121.814668,,"AS","ID","ID-GO","Pohuwato","no",,,"WAFZ",,,"https://en.wikipedia.org/wiki/Panua_Pohuwato_Airport","Imbodu, Randangan"
 344101,"WAGB","small_airport","Haji Muhammad Sidik Airport",-1.02581,114.92881,145,"AS","ID","ID-KT","Muara Teweh","yes",,"HMS","WAGB",,,"https://en.wikipedia.org/wiki/Haji_Muhammad_Sidik_Airport","Trinsing"
-343797,"WAGF","small_airport","Seruyan Kuala Pembuang Airport",-3.376062,112.536521,13,"AS","ID","ID-KT","Seruyan","yes",,"KLP","WAGF",,,"https://en.wikipedia.org/wiki/Seruyan_Kuala_Pembuang_Airport","Kota Waringin Timur"
+343797,"WAGF","small_airport","Seruyan Kuala Pembuang Airport",-3.376062,112.536521,13,"AS","ID","ID-KT","Seruyan","no",,"KLP","WAGF",,,"https://en.wikipedia.org/wiki/Seruyan_Kuala_Pembuang_Airport","Kota Waringin Timur"
 26780,"WAGG","medium_airport","Tjilik Riwut Airport",-2.22513,113.943001,82,"AS","ID","ID-KT","Palangkaraya","yes","WAGG","PKY","WAGG",,,"https://en.wikipedia.org/wiki/Tjilik_Riwut_Airport","WRBP, WAOP"
 595145,"WAGL","small_airport","Long Apari Airport",3.083333,116.433333,253,"AS","ID","ID-KI","Long Apar","no",,,"WAGL",,,,
 525300,"WAGP","small_airport","Purukcahu Airport",-0.688364,114.444658,442,"AS","ID","ID-KT",,"no",,,"WAGP",,,,
 332202,"WAHI","medium_airport","Yogyakarta International Airport",-7.905338,110.057264,24,"AS","ID","ID-YO","Yogyakarta","yes","WAHI","YIA","WAHI",,,"https://en.wikipedia.org/wiki/Yogyakarta_International_Airport","Kulon Progo"
-26833,"WAHL","medium_airport","Tunggul Wulung Airport",-7.64506,109.033997,69,"AS","ID","ID-JT","Cilacap","yes","WAHL","CXP","WAHL",,,"https://en.wikipedia.org/wiki/Tunggul_Wulung_Airport","WIIL, WIHL"
+26833,"WAHL","medium_airport","Tunggul Wulung Airport",-7.64506,109.033997,69,"AS","ID","ID-JT","Cilacap","no","WAHL","CXP","WAHL",,,"https://en.wikipedia.org/wiki/Tunggul_Wulung_Airport","WIIL, WIHL"
 41395,"WAHP","small_airport","Jenderal Besar Soedirman Airport",-7.461342,109.414612,225,"AS","ID","ID-JT","Purwokerto-Java Island","no","WAHP","PWL","WAHP",,,"https://en.wikipedia.org/wiki/Purwokerto_Airport","WICP, WIAP, Wirasaba, Purbalingga"
 42250,"WAHU","small_airport","Dewadaru Airport",-5.80091,110.47838,35,"AS","ID","ID-JT","Karimunjawa","yes",,"KWB","WAHU",,,"https://en.wikipedia.org/wiki/Dewadaru_Airport","Karimun Jawa, Karimun Java"
 41423,"WAJB","small_airport","Bokondini Airport",-3.68455,138.677437,4550,"AS","ID","ID-PP","Bokondini","yes","WAJB","BUI","WAJB",,,"https://en.wikipedia.org/wiki/Bokondini_Airport",
@@ -79084,7 +79084,7 @@
 331796,"WAME","small_airport","Buli Airport",0.917144,128.382116,7,"AS","ID","ID-MU","Pekaulang","no",,"PGQ","WAEM",,,"https://en.wikipedia.org/wiki/Buli_Airport",
 26767,"WAMG","small_airport","Jalaluddin Airport",0.63711899519,122.849998474,105,"AS","ID","ID-GO","Gorontalo-Celebes Island","yes","WAMG","GTO","WAMG",,,"https://en.wikipedia.org/wiki/Jalaluddin_Airport",
 26768,"WAMH","medium_airport","Naha Airport",3.68478,125.527162,16,"AS","ID","ID-SA","Tabukan Utara, Sangihe Islands","yes","WAMH","NAH","WAMH",,,"https://en.wikipedia.org/wiki/Naha_Airport_(Indonesia)","Tahuna"
-526307,"WAMI","small_airport","Bolaang Mongondow Airport",0.88855,124.033634,28,"AS","ID","ID-SA","Lolak","yes","WAMI","LKM","WAMI",,,"https://en.wikipedia.org/wiki/Raja_Loloda_Mokoagow_Airport",
+526307,"WAMI","small_airport","Bolaang Mongondow Airport",0.88855,124.033634,28,"AS","ID","ID-SA","Lolak","no","WAMI","LKM","WAMI",,,"https://en.wikipedia.org/wiki/Raja_Loloda_Mokoagow_Airport",
 31523,"WAMJ","small_airport","Gebe Airport",-0.078889,129.457993,125,"AS","ID","ID-MU","Gebe Island","no","WAMJ","GEB","WAMJ",,,"https://en.wikipedia.org/wiki/Gebe_Airport",
 31720,"WAMK","small_airport","Kuabang Airport",1.18528,127.896004,40,"AS","ID","ID-MU","Kao-Celebes Island","no",,"KAZ","WAEK",,,"https://en.wikipedia.org/wiki/Kuabang_Airport","WAMK"
 26770,"WAMM","medium_airport","Sam Ratulangi Airport",1.549266,124.926319,264,"AS","ID","ID-SA","Manado","yes","WAMM","MDC","WAMM",,,"https://en.wikipedia.org/wiki/Sam_Ratulangi_Airport",
@@ -79126,7 +79126,7 @@
 42251,"WAPV","small_airport","Wahai Airport",-2.8114,129.484,558,"AS","ID","ID-MA","Wahai","no","WAPV","WBA","WAPV",,,,"WT56"
 525280,"WAQC","small_airport","Maratua Airport",2.19759,118.599361,43,"AS","ID","ID-KI","Maratua","no","WAQC","RTU","WAQC",,,"https://en.wikipedia.org/wiki/Maratua_Airport",
 595149,"WAQG","small_airport","Binuang Airport",3.773936,115.855914,2523,"AS","ID","ID-KU","Binuang","no",,,"WAQG",,,,"S. Tipa Pddan"
-41486,"WAQM","small_airport","Robert Atty Bessing",3.575256,116.619769,26,"AS","ID","ID-KU","Malinau","yes",,"LNU","WAQM",,,"https://en.wikipedia.org/wiki/Robert_Atty_Bessing_Airport","WRLM, WALM"
+41486,"WAQM","small_airport","Robert Atty Bessing",3.575256,116.619769,26,"AS","ID","ID-KU","Malinau","no",,"LNU","WAQM",,,"https://en.wikipedia.org/wiki/Robert_Atty_Bessing_Airport","WRLM, WALM"
 26759,"WAQT","medium_airport","Kalimarau Airport",2.14776,117.430705,59,"AS","ID","ID-KI","Tanjung Redeb - Borneo Island","yes",,"BEJ","WAQT",,,"https://en.wikipedia.org/wiki/Kalimarau_Airport","Berau Airport, WALK, WRLK"
 595148,"WAQU","small_airport","Long Layu Airport",3.611585,115.69921,2882,"AS","ID","ID-KU","Long Layu","no",,,"WAQU",,,,
 26785,"WARA","medium_airport","Abdul Rachman Saleh Airport",-7.929099,112.714233,1726,"AS","ID","ID-JI","Malang","yes","WARA","MLG","WARA",,,"https://en.wikipedia.org/wiki/Abdul_Rachman_Saleh_Airport","WIAS, Malang, Singosari"
@@ -79336,7 +79336,7 @@
 26845,"WIDM","small_airport","Matak Airport",3.34812,106.258003,10,"AS","ID","ID-KR","Palmatak","no",,"MWK","WIDM",,,"https://en.wikipedia.org/wiki/Matak_Airport","WIOM, Medco E&P Natuna, Taremba"
 26830,"WIDN","small_airport","Raja Haji Fisabilillah International Airport",0.92397,104.53341,52,"AS","ID","ID-KR","Tanjung Pinang-Bintan Island","yes","WIDN","TNJ","WIDN",,,"https://en.wikipedia.org/wiki/Raja_Haji_Fisabilillah_Airport","WIKN"
 26831,"WIDS","small_airport","Dabo Airport",-0.479611,104.579498,95,"AS","ID","ID-KR","Pasirkuning-Singkep Island","no","WIDS","SIQ","WIDS",,,"https://en.wikipedia.org/wiki/Dabo_Airport","WIKS"
-41468,"WIGM","small_airport","Muko Muko Airport",-2.541058,101.087651,24,"AS","ID","ID-BE","Muko Muko","yes",,"MPC","WIGM",,,"https://id.wikipedia.org/wiki/Bandar_Udara_Mukomuko","WIPU, Mukomuko, Muko-Muko"
+41468,"WIGM","small_airport","Muko Muko Airport",-2.541058,101.087651,24,"AS","ID","ID-BE","Muko Muko","no",,"MPC","WIGM",,,"https://id.wikipedia.org/wiki/Bandar_Udara_Mukomuko","WIPU, Mukomuko, Muko-Muko"
 525295,"WIHC","small_airport","Wiladatika Airport",-6.356027,106.900796,210,"AS","ID","ID-JK",,"no",,,"WIHC",,,,
 26832,"WIHH","medium_airport","Halim Perdanakusuma International Airport",-6.266610145568848,106.89099884033203,84,"AS","ID","ID-JK","Jakarta","yes","WIHH","HLP","WIHH",,"http://www.angkasapura2.co.id/cabang/hlp/content.php?menu=8&page_id=1","https://en.wikipedia.org/wiki/Halim_Perdanakusuma_International_Airport","WIIH,WIIX,WIID"
 26834,"WIHP","small_airport","Pondok Cabe Air Base",-6.3369598388671875,106.76499938964844,200,"AS","ID","ID-JK","Jakarta","no","WIHP","PCB","WIHP",,,"https://en.wikipedia.org/wiki/Pondok_Cabe_Airport","WIPC,WIIP"
@@ -79344,19 +79344,19 @@
 32652,"WIIK","small_airport","Kalijati Airport",-6.53139019012,107.658996582,361,"AS","ID","ID-JB","Kalijati-Java Island","no",,,"WIHK",,,,"WIIK, Suryadarma, Kalidjati, Karichagi, Kalijaga"
 26827,"WILL","medium_airport","Radin Inten II International Airport",-5.246803,105.182531,282,"AS","ID","ID-LA","Bandar Lampung","yes","WILL","TKG","WILL",,,"https://en.wikipedia.org/wiki/Radin_Inten_II_International_Airport","WIIT, WICT"
 333624,"WILP","small_airport","Muhammad Taufiq Kiemas Airport",-5.211562,103.936501,118,"AS","ID","ID-LA","Krui","no",,"TFY","WILP",,,,
-26861,"WIMA","small_airport","Malikus Saleh Airport",5.22668,96.950302,90,"AS","ID","ID-AC","Lhok Seumawe-Sumatra Island","yes",,"LSW","WIMA",,,"https://en.wikipedia.org/wiki/Malikus_Saleh_Airport","WITM"
+26861,"WIMA","small_airport","Malikus Saleh Airport",5.22668,96.950302,90,"AS","ID","ID-AC","Lhok Seumawe-Sumatra Island","no",,"LSW","WIMA",,,"https://en.wikipedia.org/wiki/Malikus_Saleh_Airport","WITM"
 26836,"WIMB","medium_airport","Binaka Airport",1.16628,97.704327,20,"AS","ID","ID-SU","Gunungsitoli","yes","WIMB","GNS","WIMB",,,"https://en.wikipedia.org/wiki/Binaka_Airport",
 26837,"WIME","medium_airport","Aek Godang Airport",1.4001,99.430496,922,"AS","ID","ID-SU","Padang Sidempuan","no","WIME","AEG","WIME",,,"https://en.wikipedia.org/wiki/Aek_Godang_Airport",
 526312,"WIMF","small_airport","Jenderal Besar Abdul Haris Nasution Airport",0.948056,99.533333,,"AS","ID","ID-SS","Mandailing","no","WIMF","JHN","WIMF",,,"https://id.wikipedia.org/wiki/Bandar_Udara_Jenderal_Besar_Abdul_Haris_Nasution",
 26839,"WIMK","medium_airport","Soewondo Air Force Base",3.558425,98.672275,114,"AS","ID","ID-SU","Medan","no","WIMK","MES","WIMK",,,"https://en.wikipedia.org/wiki/Soewondo_Air_Force_Base","Polonia International Airport, WIMM"
 309577,"WIMM","large_airport","Kualanamu International Airport",3.637847,98.870566,23,"AS","ID","ID-SU","Beringin","yes","WIMM","KNO","WIMM",,"http://www.kualanamu-airport.co.id/","https://en.wikipedia.org/wiki/Kualanamu_International_Airport","Medan"
-26840,"WIMN","small_airport","Silangit Airport",2.25973,98.991898,4700,"AS","ID","ID-SU","Siborong-Borong","yes","WIMN","DTB","WIMN",,"http://silangit-airport.co.id/","https://en.wikipedia.org/wiki/Silangit_Airport","Lake Toba, North Tapanuli"
+26840,"WIMN","small_airport","Silangit Airport",2.25973,98.991898,4700,"AS","ID","ID-SU","Siborong-Borong","no","WIMN","DTB","WIMN",,"http://silangit-airport.co.id/","https://en.wikipedia.org/wiki/Silangit_Airport","Lake Toba, North Tapanuli"
 41462,"WIMP","small_airport","Sibisa Airport",2.601967,98.962381,4234,"AS","ID","ID-SU","Parapat-Sumatra Island","no","WIMP","SIW","WIMP",,,"https://en.wikipedia.org/wiki/Sibisa_Airport","Parapat Airport, Ajibata"
 26841,"WIMS","medium_airport","Dr. Ferdinand Lumban Tobing Airport",1.557127,98.887145,33,"AS","ID","ID-SU","Sibolga (Pinangsori)","yes","WIMS","FLZ","WIMS",,,"https://en.wikipedia.org/wiki/Ferdinand_Lumban_Tobing_Airport","Pinangsori Airport"
 507992,"WIMU","medium_airport","Alas Leuser Airport",3.391456,97.863726,419,"AS","ID","ID-AC","Kutacane","yes",,"LSR","WIMU",,,"https://en.wikipedia.org/wiki/Alas_Leuser_Airport",
 41465,"WIOB","small_airport","Bengkayang Airport",0.8333330154418945,109.48332977294922,294,"AS","ID","ID-KB","Bengkayang-Borneo Island","no",,,"WIOB",,,,
 26842,"WIOD","small_airport","H A S Hanandjoeddin International Airport",-2.74572,107.754997,164,"AS","ID","ID-BB","Tanjung Pandan","yes",,"TJQ","WIKT",,,"https://en.wikipedia.org/wiki/H.A.S._Hanandjoeddin_International_Airport","Buluh Tumbang Airport,WIKD, WIOD"
-26843,"WIOG","medium_airport","Nanga Pinoh Airport",-0.34864,111.746155,123,"AS","ID","ID-KB","Nanga Pinoh-Borneo Island","yes","WIOG","NPO","WIOG",,,"https://en.wikipedia.org/wiki/Nanga_Pinoh_Airport","Nangapinoh"
+26843,"WIOG","medium_airport","Nanga Pinoh Airport",-0.34864,111.746155,123,"AS","ID","ID-KB","Nanga Pinoh-Borneo Island","no","WIOG","NPO","WIOG",,,"https://en.wikipedia.org/wiki/Nanga_Pinoh_Airport","Nangapinoh"
 595093,"WIOH","small_airport","Liku Airport",1.737455,109.324002,25,"AS","ID","ID-KB","Paloh","no","WIOH",,"WIOH",,,,
 41466,"WIOI","small_airport","Singkawang Airport",1.0756800174713135,109.68800354003906,276,"AS","ID","ID-KB","Sinkawang-Borneo Island","no",,,"WIOI",,,,
 26844,"WIOK","medium_airport","Rahadi Osman Airport",-1.817165,109.963469,46,"AS","ID","ID-KB","Ketapang","yes","WIOK","KTG","WIOK",,,"https://en.wikipedia.org/wiki/Rahadi_Osman_Airport","Rahadi Usman"
@@ -79524,7 +79524,7 @@
 41480,"WRKN","small_airport","Naikliu Airport",-9.49547004699707,123.79499816894531,60,"AS","ID","ID-NT","Naikliu-Timor Island","no",,,"WRKN",,,,
 41483,"WRLA","small_airport","Sanggata/Sangkimah Airport",0.3847,117.543,60,"AS","ID","ID-KI","Sanggata/Sangkimah","no",,"SGQ","WALA",,,"http://id.wikipedia.org/wiki/Bandar_Udara_Sangkimah","WRLA, Pertamina"
 35279,"WRLB","small_airport","Yuvai Semaring Airport",3.900495,115.690089,2540,"AS","ID","ID-KU","Long Bawan","yes",,"LBW","WAQJ",,,"https://en.wikipedia.org/wiki/Juvai_Semaring_Airport","WRLB, Juvai Semaring Airport, Yuvai Semaring, Long Bawang"
-30806,"WRLC","small_airport","LNG Badak Airport",0.121656,117.476558,49,"AS","ID","ID-KI","Bontang-Borneo Island","yes","WALC","BXT","WALC",,,"https://en.wikipedia.org/wiki/PT_Badak_Bontang_Airport","WRLC"
+30806,"WRLC","small_airport","LNG Badak Airport",0.121656,117.476558,49,"AS","ID","ID-KI","Bontang-Borneo Island","no","WALC","BXT","WALC",,,"https://en.wikipedia.org/wiki/PT_Badak_Bontang_Airport","WRLC"
 35281,"WRLF","small_airport","Nunukan Airport",4.134001,117.669546,59,"AS","ID","ID-KU","Nunukan-Nunukan Island","no",,"NNX","WAQA",,,"https://en.wikipedia.org/wiki/Nunukan_Airport","WRLF, WALF"
 41484,"WRLH","small_airport","Tanah Grogot Airport",-1.885541,116.256809,17,"AS","ID","ID-KI","Tanah Grogot","no","WRLH","TNB","WRLH",,,,
 311283,"WRLJ","small_airport","Tanjung Bara Airport",0.5605,117.64435,48,"AS","ID","ID-KI","Sangata","no",,,"WALB",,,"http://id.wikipedia.org/wiki/Bandar_Udara_Tanjung_Bara",

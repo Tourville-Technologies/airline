@@ -68,6 +68,7 @@ object AirportSizeAdjust {
         "HKG" -> 8,
         "TPE" -> 7,
         "BKK" -> 7,
+        "MFM" -> 7,
         //https://en.wikipedia.org/wiki/List_of_the_busiest_airports_in_Europe
         //2023, up to 10m pax, excluding "discount" airports
         "LGW" -> 7, //should be 8
@@ -106,11 +107,11 @@ object AirportSizeAdjust {
         //https://en.wikipedia.org/wiki/List_of_the_busiest_airports_in_South_America
         "LIM" -> 7,
         "SCL" -> 7,
-        "CGH" -> 5,
+        "CGH" -> 6,
         "BSB" -> 7,
         "GIG" -> 7,
         "MDE" -> 7,
-        "AEP" -> 5,
+        "AEP" -> 6,
         //https://en.wikipedia.org/wiki/List_of_the_busiest_airports_in_the_Middle_East
         "AUH" -> 7,
         "TLV" -> 7,
@@ -142,11 +143,13 @@ object AirportSizeAdjust {
         "MCY" -> 4,
         "HTI" -> 3,
         "AVV" -> 3,
+        //NZ
         "AKL" -> 7,
         "ZQN" -> 4,
         "WLG" -> 4,
         "XCH" -> 3,
         "NLK" -> 3,
+        "HLZ" -> 3,
         //https://en.wikipedia.org/wiki/List_of_airports_in_Albania
         //algeria
         "TMR" -> 3,
@@ -197,8 +200,9 @@ object AirportSizeAdjust {
         "SDU" -> 6,
         "CNF" -> 6,
         "REC" -> 6,
+        "VCP" -> 6,
         "POA" -> 5,
-        "SSA" -> 5,
+        "SSA" -> 6,
         "FOR" -> 5,
         "CWB" -> 5,
         "BEL" -> 5,
@@ -262,8 +266,8 @@ object AirportSizeAdjust {
         "GOQ" -> 3,
         //https://en.wikipedia.org/wiki/List_of_the_busiest_airports_in_Colombia
         "BOG" -> 8,
-        "CLO" -> 5,
-        "CTG" -> 5,
+        "CLO" -> 6,
+        "CTG" -> 6,
         "BAQ" -> 5,
         "SMR" -> 4,
         "PEI" -> 5,
@@ -290,13 +294,23 @@ object AirportSizeAdjust {
         "SPX" -> 3,
         //https://en.wikipedia.org/wiki/List_of_the_busiest_airports_in_France
         "NTE" -> 6,
+        "MPL" -> 5,
+        "SXB" -> 5,
+        "BES" -> 4,
+        "BIQ" -> 4,
+        "AJA" -> 4,
         "GNB" -> 3,
         "XCR" -> 3,
         "TLN" -> 3,
         "LTT" -> 2,
         "FSP" -> 3,
-        "PTP" -> 5,
         "WLS" -> 3,
+        "ETZ" -> 2,
+        "DNR" -> 2,
+        "LRT" -> 2,
+        "SNR" -> 2,
+        "PUF" -> 2,
+        "PTP" -> 5, //overseas
         //ethiopia
         "MQX" -> 3,
         //eritrea
@@ -389,21 +403,24 @@ object AirportSizeAdjust {
         "NAG" -> 3,
         "KNU" -> 2,
         //https://en.wikipedia.org/wiki/List_of_the_busiest_airports_in_Indonesia
-        "DPS" -> 6,
+        "HLP" -> 4,
+        "DPS" -> 7,
         "SUB" -> 6,
         "UPG" -> 6,
-        "JOG" -> 5,
-        "BTH" -> 5,
-        "PLM" -> 5,
-        "SRG" -> 5,
-        "BDO" -> 5,
-        "PNK" -> 5,
-        "LOP" -> 5,
-        "PKU" -> 5,
-        "PDG" -> 5,
+        "JOG" -> 6,
+        "BTH" -> 6,
+        "PLM" -> 6,
+        "SRG" -> 6,
+        "BDO" -> 6,
+        "PNK" -> 6,
+        "LOP" -> 6,
+        "PKU" -> 6,
+        "PDG" -> 6,
         "MDC" -> 5,
         "BIK" -> 3,
         "KDI" -> 3,
+        "KOE" -> 5,
+        "DJB" -> 4,
         "TTE" -> 4,
         //https://en.wikipedia.org/wiki/List_of_the_busiest_airports_in_Iran
         "DEF" -> 3,
@@ -428,6 +445,7 @@ object AirportSizeAdjust {
         "SUF" -> 5,
         "GOA" -> 5,
         "BZO" -> 3,
+        "QSR" -> 3,
         //ireland
         "ORK" -> 5,
         "SNN" -> 5,
@@ -500,6 +518,7 @@ object AirportSizeAdjust {
         "TOS" -> 5,
         "TRF" -> 4,
         "AES" -> 4,
+        "KRS" -> 4,
         //https://en.wikipedia.org/wiki/List_of_the_busiest_airports_in_Pakistan
         "SKT" -> 3,
         "UET" -> 3,
@@ -513,6 +532,8 @@ object AirportSizeAdjust {
         "DVO" -> 6,
         "MPH" -> 6,
         "DRP" -> 4,
+        "GES" -> 3,
+        "DRP" -> 3,
         //https://en.wikipedia.org/wiki/List_of_the_busiest_airports_in_Poland
         "KRK" -> 6,
         "GDN" -> 6,
@@ -522,6 +543,9 @@ object AirportSizeAdjust {
         "WMI" -> 4,
         //portugal
         "CAT" -> 3,
+        //https://en.wikipedia.org/wiki/List_of_the_busiest_airports_in_Romania
+        "CLJ" -> 5,
+        "IAS" -> 5,
         //https://en.wikipedia.org/wiki/List_of_airports_in_Rwanda
         //https://en.wikipedia.org/wiki/List_of_the_busiest_airports_in_Russia
         "KZN" -> 6,
@@ -573,6 +597,8 @@ object AirportSizeAdjust {
         "USN" -> 3,
         "RSU" -> 3,
         //https://en.wikipedia.org/wiki/List_of_airports_in_El_Salvador
+        //sri lanka
+        "JAF" -> 3,
         //sweden
         "MMX" -> 5,
         "NYO" -> 4,

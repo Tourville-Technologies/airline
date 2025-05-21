@@ -11,13 +11,14 @@ import com.patson.model.event.Olympics
 
 import scala.util.Random
 import com.patson.model.oil.OilPrice
+import com.patson.util.AllianceCache
 
 import java.util.concurrent.ThreadLocalRandom
 
 object LinkSimulation {
   val FUEL_UNIT_COST = OilPrice.DEFAULT_UNIT_COST * 94 //for easier flight monitoring, let's make it the default unit price here
   val FUEL_DISTANCE_EXPONENT = 1.4
-  val FUEL_EMPTY_AIRCRAFT_BURN_PERCENT = 0.62
+  val FUEL_EMPTY_AIRCRAFT_BURN_PERCENT = 0.58
   val CREW_UNIT_COST = 6.75
   val CREW_BASE_COST = 50
   val CREW_EQ_EXPONENT = 1.95
@@ -257,7 +258,7 @@ object LinkSimulation {
     val targetQualityCost = Math.pow(flightLink.airline.getTargetServiceQuality().toDouble / 22, CREW_EQ_EXPONENT)
     var crewCost = CREW_BASE_COST
     var inflightCost, revenue = 0
-    val crewUnitCost = if (link.airline.airlineType == AirlineType.Discount || link.airline.airlineType == AirlineType.BEGINNER) CREW_UNIT_COST * 0.75 else CREW_UNIT_COST
+    val crewUnitCost = if (link.airline.airlineType == AirlineType.DISCOUNT || link.airline.airlineType == AirlineType.BEGINNER) CREW_UNIT_COST * 0.75 else CREW_UNIT_COST
     LinkClass.values.foreach { linkClass =>
       val capacity = flightLink.capacity(linkClass)
       val soldSeats = flightLink.soldSeats(linkClass)
@@ -476,11 +477,13 @@ object LinkSimulation {
           linkConsideration.link.transportType == TransportType.FLIGHT &&
             linkConsideration.link.airline.id == airlineId &&
             linkConsideration.link.airline.getAllianceId().isDefined &&
+            AllianceCache.isEstablishedAndValid(linkConsideration.link.airline.getAllianceId().get, airlineId) &&
           route.links.exists(otherLink => 
             otherLink.link.transportType == TransportType.FLIGHT &&
             otherLink.link.airline.id != airlineId &&
             otherLink.link.airline.getAllianceId().isDefined &&
-            otherLink.link.airline.getAllianceId() == linkConsideration.link.airline.getAllianceId()
+            otherLink.link.airline.getAllianceId() == linkConsideration.link.airline.getAllianceId() &&
+            AllianceCache.isEstablishedAndValid(linkConsideration.link.airline.getAllianceId().get, airlineId)
           )
         )
 
