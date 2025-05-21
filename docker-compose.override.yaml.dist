@@ -4,8 +4,6 @@ services:
       DB_NAME: CHANGE-THIS
       DB_USER: AND-THIS
       DB_PASSWORD: AND-ESPECIALLY-THIS
-    ports:
-      - "9000:9000"
 
   airline-backend:
     environment:

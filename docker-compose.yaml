@@ -16,7 +16,7 @@ services:
       ES_HOST: airline-search
     entrypoint: sh -c "/home/airline/airline/scripts/data/init.sh && /home/airline/airline/scripts/web/start.sh"
     ports:
-      - "9000:9000"
+      - "9001:9001"
     networks:
       - airline
 
