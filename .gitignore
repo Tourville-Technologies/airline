@@ -10,3 +10,6 @@
 /airline-data/.bsp
 *.sql
 *.tar
+
+*.bloop
+**/target/**
