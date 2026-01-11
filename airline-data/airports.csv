@@ -7676,7 +7676,7 @@
 14450,"7WA2","heliport","Jefferson General Hospital Heliport",48.109798431396484,-122.79299926757812,160,"NA","US","US-WA","Port Townsend","no",,,"7WA2","7WA2",,,
 14451,"7WA3","small_airport","West Wind Airport",48.88610076904297,-122.3290023803711,160,"NA","US","US-WA","Everson","no",,,"7WA3","7WA3",,,
 14452,"7WA4","small_airport","Humbert Airport",47.85749816894531,-117.77999877929688,1890,"NA","US","US-WA","Ford","no",,,"7WA4","7WA4",,,
-14453,"7WA5","small_airport","Stuart Island Airpark",48.673379,-123.175439,10,"NA","US","US-WA","Friday Harbor","yes",,"SSW","7WA5","7WA5",,,
+14453,"7WA5","small_airport","Stuart Island Airpark",48.673379,-123.175439,10,"NA","US","US-WA","Stuart Island","yes",,"SSW","7WA5","7WA5",,,
 14455,"7WA7","small_airport","Mc Whorter Ranch Airport",46.313653,-119.615042,1356,"NA","US","US-WA","Prosser","no",,,,,,,"7WA7"
 14456,"7WA8","heliport","Good Samaritan Hospital Heliport",47.17900085449219,-122.28900146484375,120,"NA","US","US-WA","Puyallup","no",,,"7WA8","7WA8",,,
 14457,"7WA9","heliport","Ocean Beach Hospital Heliport",46.3026008605957,-124.04299926757812,25,"NA","US","US-WA","Ilwaco","no",,,"7WA9","7WA9",,,
@@ -16219,11 +16219,11 @@
 42214,"BZ-MDB","small_airport","Melinda Airport",17.004299,-88.304199,101,"NA","BZ","BZ-SC","Melinda","no",,"MDB","MZML",,,"https://en.wikipedia.org/wiki/Melinda_Airport",
 42212,"BZ-ORZ","small_airport","H.E Alfredo Martinez (Tower Hill) Airstrip",18.046767,-88.583858,69,"NA","BZ","BZ-OW","Orange Walk","yes",,"ORZ","MZAM",,,"https://en.wikipedia.org/wiki/Orange_Walk_Airport","Orange Walk Airport"
 35305,"BZ-PND","medium_airport","Punta Gorda Airport",16.1024,-88.808296,7,"NA","BZ","BZ-TOL","Punta Gorda","yes",,"PND","MZPG","PND",,"https://en.wikipedia.org/wiki/Punta_Gorda_Airport_(Belize)",
-42210,"BZ-SJX","medium_airport","Sartaneja Airport",18.3561,-88.130798,3,"NA","BZ","BZ-CZL","Sartaneja","yes",,"SJX","MZSJ",,,"https://en.wikipedia.org/wiki/Sartaneja_Airport",
+42210,"BZ-SJX","medium_airport","Sartaneja Airport",18.3561,-88.130798,3,"NA","BZ","BZ-CZL","Sartaneja","no",,"SJX","MZSJ",,,"https://en.wikipedia.org/wiki/Sartaneja_Airport",
 32370,"BZ-SPR","medium_airport","John Greif II Airport",17.9139,-87.9711,4,"NA","BZ","BZ-CY","San Pedro","yes",,"SPR","MZSP",,,"https://en.wikipedia.org/wiki/San_Pedro_Airport",
 42218,"BZ-SQS","small_airport","Matthew Spain Airport",17.185898,-89.009936,199,"NA","BZ","BZ-CY","Spanish Lookout","no",,"SQS","MZCF",,,"https://en.wikipedia.org/wiki/Matthew_Spain_Airport","Central Farm Airstrip"
 42211,"BZ-STU","small_airport","Santa Cruz Airport",18.2721004486084,-88.456298828125,18,"NA","BZ","BZ-CZL","Santa Cruz","no",,"STU",,,,,
-42208,"BZ-SVK","small_airport","Silver Creek Airport",16.728338,-88.369174,216,"NA","BZ","BZ-SC","Silver Creek","yes",,"SVK","MZKT",,,"https://en.wikipedia.org/wiki/Silver_Creek_Airport",
+42208,"BZ-SVK","small_airport","Silver Creek Airport",16.728338,-88.369174,216,"NA","BZ","BZ-SC","Silver Creek","no",,"SVK","MZKT",,,"https://en.wikipedia.org/wiki/Silver_Creek_Airport",
 42215,"BZ-TZA","medium_airport","Sir Barry Bowen Municipal Airport",17.517239,-88.195775,8,"NA","BZ","BZ-BZ","Belize City","yes",,"TZA","MZBE",,,"https://en.wikipedia.org/wiki/Belize_City_Municipal_Airport","Belize City Municipal"
 27300,"BZB","medium_airport","Bazaruto Island Airport",-21.5411,35.4729,,"AF","MZ","MZ-I","Bazaruto Island","no",,"BZB",,,,"https://en.wikipedia.org/wiki/Bazaruto_Island_Airport",
 302391,"BZM","small_airport","Bemolanga Airport",-17.6925,45.0888333333,950,"AF","MG","MG-M","Bemolanga","no",,"BZM",,,,,
@@ -20634,7 +20634,7 @@
 1804,"CYLQ","small_airport","La Tuque Airport",47.4096984863,-72.7889022827,548,"NA","CA","CA-QC","La Tuque","no","CYLQ","YLQ","CYLQ",,,"https://en.wikipedia.org/wiki/La_Tuque_Airport","YLQ"
 1805,"CYLR","medium_airport","Leaf Rapids Airport",56.513301849365234,-99.98529815673828,959,"NA","CA","CA-MB","Leaf Rapids","no","CYLR","YLR","CYLR",,,"https://en.wikipedia.org/wiki/Leaf_Rapids_Airport",
 1293,"CYLS","medium_airport","Barrie-Lake Simcoe Regional Airport",44.485056,-79.554663,972,"NA","CA","CA-ON","Barrie","yes","CYLS","YLK","CYLS","CYLS","http://www.lakesimcoeairport.com/","https://en.wikipedia.org/wiki/Barrie-Orillia_(Lake_Simcoe_Regional)_Airport","NB9, CNB9, Oro Station"
-1806,"CYLT","medium_airport","Alert Airport",82.517799,-62.280602,100,"NA","CA","CA-NU","Alert","no","CYLT","YLT","CYLT",,,"https://en.wikipedia.org/wiki/Alert_Airport","YLT"
+1806,"CYLT","medium_airport","Alert Airport",82.517799,-62.280602,100,"NA","CA","CA-NU","Alert","yes","CYLT","YLT","CYLT",,,"https://en.wikipedia.org/wiki/Alert_Airport","YLT"
 1807,"CYLU","small_airport","Kangiqsualujjuaq (Georges River) Airport",58.711399,-65.992798,215,"NA","CA","CA-QC","Kangiqsualujjuaq","yes","CYLU","XGR","CYLU",,,"https://en.wikipedia.org/wiki/Kangiqsualujjuaq_(Georges_River)_Airport","YLU"
 1808,"CYLW","medium_airport","Kelowna International Airport",49.9561,-119.377998,1421,"NA","CA","CA-BC","Kelowna","yes","CYLW","YLW","CYLW",,"http://www.kelowna.ca/CM/Page68.aspx","https://en.wikipedia.org/wiki/Kelowna_International_Airport","Kelowna, Okanagan"
 17057,"CYM","seaplane_base","Chatham Seaplane Base",57.5149,-134.945999,,"NA","US","US-AK","Chatham","yes",,"CYM","05AA","05AA",,"https://en.wikipedia.org/wiki/Chatham_Seaplane_Base","CYM"
@@ -49481,7 +49481,7 @@
 308248,"NOO","small_airport","Naoro Airport",-9.254455,147.621352,2372,"OC","PG","PG-CPM","Naoro Vilage","no",,"NOO","AYNL","NAO",,,
 308292,"NP-0001","small_airport","Kamal Bazar Airport",29.0531,81.34256,6440,"AS","NP","NP-P7","Kamal Bazar","no",,,,,,,
 315129,"NP-0002","small_airport","Talcha Rara Mugu Airport",29.5211,82.1468,8970,"AS","NP","NP-P6","Karkibada","no",,,"VNRR","VNT1",,"https://en.wikipedia.org/wiki/Talcha_Airport",
-342097,"NP-0003","medium_airport","Pokhara International Airport",28.1838,84.0147,2595,"AS","NP","NP-P4","Pokhara","no",,"PKR","VNPR",,,"https://en.wikipedia.org/wiki/Pokhara_International_Airport",
+342097,"NP-0003","medium_airport","Pokhara International Airport",28.1838,84.0147,2595,"AS","NP","NP-P4","Pokhara","yes",,"PKR","VNPR",,,"https://en.wikipedia.org/wiki/Pokhara_International_Airport",
 350891,"NP-0004","heliport","Hotel Everest View Heliport",27.8156,86.72319,12623,"AS","NP","NP-P1","Khumjung","no",,,,,,,
 350892,"NP-0005","heliport","Tengboche Monastery Heliport",27.83644,86.76099,12703,"AS","NP","NP-P1","Khumjung","no",,,,,,,
 350893,"NP-0006","heliport","Rivendell Lodge Heliport",27.84001,86.7697,12182,"AS","NP","NP-P1","Khumjung","no",,,,,,,
@@ -60209,7 +60209,7 @@
 6190,"SLTJ","medium_airport","Capitan Oriel Lea Plaza Airport",-21.5557,-64.701302,6079,"SA","BO","BO-T","Tarija","yes","SLTJ","TJA","SLTJ",,,"https://en.wikipedia.org/wiki/Cap._Oriel_Lea_Plaza_Airport",
 39470,"SLTL","small_airport","San Cristóbal Toldos Airport",-21.175602,-67.166689,11800,"SA","BO","BO-P","Nor Lipez","no",,,"SLTL",,,"https://en.wikipedia.org/wiki/Ventilla_Airport",
 39551,"SLTO","small_airport","Totora Airport",-17.798166275024414,-68.09349822998047,12530,"SA","BO","BO-O","Oruro","no",,,"SLTO",,,,
-6191,"SLTR","medium_airport","Teniente Av. Jorge Henrich Arauz Airport",-14.8186998367,-64.9179992676,509,"SA","BO","BO-B","Trinidad","no","SLTR","TDD","SLTR",,,"https://en.wikipedia.org/wiki/Tte._Av._Jorge_Henrich_Arauz_Airport",
+6191,"SLTR","medium_airport","Teniente Av. Jorge Henrich Arauz Airport",-14.8186998367,-64.9179992676,509,"SA","BO","BO-B","Trinidad","yes","SLTR","TDD","SLTR",,,"https://en.wikipedia.org/wiki/Tte._Av._Jorge_Henrich_Arauz_Airport",
 39472,"SLTU","small_airport","Turco Airport",-18.195833206176758,-68.14199829101562,12500,"SA","BO","BO-O","Sajama","no",,,"SLTU",,,,
 39469,"SLTW","small_airport","Tita Airport",-18.466400146484375,-62.11199951171875,1312,"SA","BO","BO-S","San Rafael","no",,,"SLTW",,,,
 39553,"SLTX","small_airport","Tuichi Airport",-14.316666603088379,-68.58333587646484,2360,"SA","BO","BO-L","Franz Tamayo","no",,,"SLTX",,,,
@@ -60220,7 +60220,7 @@
 314358,"SLUP","small_airport","Puerto America Airport",-11.7616,-67.95864,571,"SA","BO","BO-N","Puerto America","no",,,"SLUP",,,,
 39555,"SLUS","small_airport","Urusi Airport",-14.316667,-66.166664,805,"SA","BO","BO-B","Ballivian","no",,,"SLUS",,,"https://en.wikipedia.org/wiki/Urusi_Airport",
 39554,"SLUU","small_airport","Ulla Ulla Airport",-15.033334,-69.25,14360,"SA","BO","BO-L","Franz Tamayo","no",,,"SLUU",,,"https://en.wikipedia.org/wiki/Ulla_Ulla_Airport",
-39473,"SLUY","small_airport","Uyuni Joya Andina Airport",-20.441304,-66.857553,11136,"SA","BO","BO-P","Quijarro","no","SLUY","UYU","SLUY",,,"https://en.wikipedia.org/wiki/Uyuni_Airport",
+39473,"SLUY","small_airport","Uyuni Joya Andina Airport",-20.441304,-66.857553,11136,"SA","BO","BO-P","Quijarro","yes","SLUY","UYU","SLUY",,,"https://en.wikipedia.org/wiki/Uyuni_Airport",
 39556,"SLVA","small_airport","Villa Aroma Airport",-17.32101,-67.75322,12533,"SA","BO","BO-L","Aroma","no",,,"SLVA",,,"https://en.wikipedia.org/wiki/Villa_Aroma_Airport",
 39495,"SLVD","small_airport","Covendo Airport",-15.833333,-67.083336,4887,"SA","BO","BO-L","Sud Yungas","no",,,"SLVD",,,"https://en.wikipedia.org/wiki/Covendo_Airport",
 39474,"SLVE","small_airport","Venecia Airport",-14.636,-66.750298,722,"SA","BO","BO-B","Yacuma","no",,,"SLVE",,,"https://en.wikipedia.org/wiki/Venecia_Airport",
@@ -79421,7 +79421,7 @@
 26878,"WMKP","medium_airport","Penang International Airport",5.297140121459961,100.2770004272461,11,"AS","MY","MY-07","Penang","yes","WMKP","PEN","WMKP",,,"https://en.wikipedia.org/wiki/Penang_International_Airport",
 41329,"WMLH","heliport","TLDM Lumut Heliport",4.233307,100.616276,15,"AS","MY","MY-08","Lumut","no",,,"WMLH",,,,
 35209,"WMPA","small_airport","Pulau Pangkor Airport",4.244719982147217,100.5530014038086,19,"AS","MY","MY-08","Pangkor Island","yes","WMPA","PKG","WMPA",,,"https://en.wikipedia.org/wiki/Pangkor_Airport",
-41319,"WMPR","small_airport","LTS Pulau Redang Airport",5.764804,103.004942,36,"AS","MY","MY-11","Redang","no","WMPR","RDN","WMPR",,,"https://en.wikipedia.org/wiki/Redang_Airport",
+41319,"WMPR","small_airport","LTS Pulau Redang Airport",5.764804,103.004942,36,"AS","MY","MY-11","Redang","yes","WMPR","RDN","WMPR",,,"https://en.wikipedia.org/wiki/Redang_Airport",
 26879,"WMSA","medium_airport","Sultan Abdul Aziz Shah International Airport",3.130579948425293,101.54900360107422,90,"AS","MY","MY-10","Subang","yes","WMSA","SZB","WMSA",,,"https://en.wikipedia.org/wiki/Sultan_Abdul_Aziz_Shah_Airport",
 25795,"WN00","small_airport","Kimshan Ranch Airport",47.8400993347168,-122.86000061035156,80,"NA","US","US-WA","Quilcene","no",,,"WN00","WN00",,,
 25797,"WN02","heliport","Mile Bluff Medical Center Heliport",43.78229904174805,-90.07579803466797,920,"NA","US","US-WI","Mauston","no",,,"WN02","WN02",,,
@@ -79913,7 +79913,7 @@
 504769,"XP-0008","heliport","Bei Dao (North Island) Heliport",16.96058,112.3147,,"AS","XP","XP-U-A","North Island","no",,,,,,,
 342165,"XP-0009","heliport","Zhaoshu Dao (Tree Island) Heliport",16.9782,112.2664,,"AS","XP","XP-U-A","Tree Island","no",,,,,,,
 42923,"XRMU","medium_airport","Khankala Air Base",43.2981,45.7841,548,"AS","RU","RU-CE","Grozny","no",,,"XRMU",,,,"Khankala, Hankala, Ханкала"
-332207,"XRQ","small_airport","New Barag Right Banner Baogede Airport",48.575585,116.939382,1798,"AS","CN","CN-15","New Barag Right Banner","yes",,"XRQ",,,,"https://en.wikipedia.org/wiki/Xinbarag_Youqi_Baogede_Airport",
+332207,"XRQ","small_airport","New Barag Right Banner Baogede Airport",48.575585,116.939382,1798,"AS","CN","CN-15","New Barag Right Banner","no",,"XRQ",,,,"https://en.wikipedia.org/wiki/Xinbarag_Youqi_Baogede_Airport",
 35017,"XRWL","medium_airport","Lebyazhye Air Base",50.201698,45.208302,381,"AS","RU","RU-VGG","Kamyshin","no",,,"XRWL",,,"https://en.wikipedia.org/wiki/Lebyazhye_(air_base)","Аэродром Лебяжье, ЬРВЛ"
 26225,"XS00","small_airport","Flying D Airport",30.63719940185547,-98.74829864501953,1460,"NA","US","US-TX","Llano","no",,,"XS00","XS00",,,
 26226,"XS01","small_airport","Tschirhart Ranch Airport",30.450199127197266,-98.88619995117188,2060,"NA","US","US-TX","Fredericksburg","no",,,"XS01","XS01",,,
@@ -82448,7 +82448,7 @@
 35218,"ZKSD","medium_airport","Sondok Airport",39.745201,127.473999,12,"AS","KP","KP-08","Sŏndŏng-ni","yes","ZKSD","DSO","ZKSD",,,"https://en.wikipedia.org/wiki/Sondok_Airport",
 35239,"ZKSE","small_airport","Samjiyŏn Airport",41.907132,128.409834,4547,"AS","KP","KP-10","Samjiyŏn","no","ZKSE","YJS","ZKSE",,,"https://en.wikipedia.org/wiki/Samjiy%C5%8Fn_Airport",
 35214,"ZKUJ","small_airport","Uiju Airport",40.150013,124.501104,32,"AS","KP","KP-03","Uiju","no","ZKUJ","UJU","ZKUJ",,,"https://en.wikipedia.org/wiki/Uiju_Airfield","의주비행장, 義州飛行場"
-35213,"ZKWS","medium_airport","Wonsan Kalma International Airport",39.166801,127.486,7,"AS","KP","KP-07","Wonsan","yes","ZKWS","WOS","ZKWS",,,"https://en.wikipedia.org/wiki/Wonsan_Kalma_International_Airport",
+35213,"ZKWS","medium_airport","Wonsan Kalma International Airport",39.166801,127.486,7,"AS","KP","KP-07","Wonsan","no","ZKWS","WOS","ZKWS",,,"https://en.wikipedia.org/wiki/Wonsan_Kalma_International_Airport",
 30632,"ZLAK","small_airport","Ankang Fuqiang Airport",32.75696,108.87338,1209,"AS","CN","CN-61","Ankang (Hanbin)","yes","ZLAK","AKA","ZLAK",,,"https://en.wikipedia.org/wiki/Ankang_Fuqiang_Airport",
 30929,"ZLDH","medium_airport","Dunhuang Mogao International Airport",40.161098,94.809196,,"AS","CN","CN-62","Dunhuang","yes","ZLDH","DNH","ZLDH",,,"https://en.wikipedia.org/wiki/Dunhuang_Airport",
 318171,"ZLDL","small_airport","Delingha Airport",37.125286,97.268658,9843,"AS","CN","CN-63","Delingha","yes","ZLDL","HXD","ZLDL",,,"https://en.wikipedia.org/wiki/Delingha_Airport",

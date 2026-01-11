@@ -83,7 +83,7 @@ a {
 	color: #616161;
 }
 a:hover {
-	color: #6093e7;
+	/* color: #6093e7; */
 }
 b {
 	font-weight: bold;
@@ -92,6 +92,9 @@ p {
 	font-family: "Inter", Verdana, Arial, sans-serif;
 	line-height: 1.2;
 	font-size: 12px;
+}
+p + p {
+    margin-top: 4px;
 }
 h1 {
 	font-family: "Inter", Verdana, Arial, sans-serif;
