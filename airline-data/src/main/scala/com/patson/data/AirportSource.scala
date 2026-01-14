@@ -575,6 +575,7 @@ object AirportSource {
           if (generatedKeys.next()) {
             val generatedId = generatedKeys.getInt(1)
             airport.id = generatedId
+            println(s"Saved airport ${airport.iata} with id ${airport.id}")
 
             // City-airport relationships are now managed separately in GeoDataGenerator
             //insert features
@@ -898,6 +899,11 @@ object AirportSource {
     try {
       connection.setAutoCommit(false)
       
+      var counter = 0;
+      var progressCount = 0;
+
+      print("Saving city-airport relationships: ")
+
       airportCityRelationships.foreach { case (airportId, relationships) =>
         relationships.foreach { case (city, share) =>
           val statement = connection.prepareStatement("INSERT INTO " + AIRPORT_CITY_SHARE_TABLE + "(airport, city, share) VALUES(?,?,?)")
@@ -906,6 +912,16 @@ object AirportSource {
           statement.setDouble(3, share)
           statement.executeUpdate()
           statement.close()
+        }
+
+        val progressChunk = airportCityRelationships.size / 100
+        counter += 1
+        if (counter % progressChunk == 0) {
+          progressCount += 1;
+          print(".")
+          if (progressCount % 10 == 0) {
+            print(progressCount + "% ")
+          }
         }
       }
       

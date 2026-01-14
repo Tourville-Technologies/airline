@@ -59,7 +59,10 @@ object AirportGeoPatcher extends App {
     println(s"Creating ${newAirports.length} Airports")
     AirportSource.saveAirports(newAirports)
 
-    AirportSource.saveCityAirportRelationships(cityAirportRelationships)
+    AirportSource.saveCityAirportRelationships(cityAirportRelationships.map {
+      case (airport, relationships) =>
+        (airport.id, relationships)
+    })
 
     val deletingAirportIds = existingAirports.map(_.id).diff(computedAirports.map(_.id))
     println(s"Could delete ${deletingAirportIds.length} Airports")
