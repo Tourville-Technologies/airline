@@ -326,7 +326,9 @@ object GeoDataGenerator extends App {
     val airportByIata = airportResult.groupBy(_.iata)
     val cityAirportRelationships = airportCityRelationships.flatMap {
       case (iata, relationships) =>
-        airportByIata.get(iata).map(airports => (airports.head.id, relationships.toList))
+        airportByIata
+          .get(iata)
+          .map(airports => (airports.head, relationships.toList))
     }.toMap
 
     println()
