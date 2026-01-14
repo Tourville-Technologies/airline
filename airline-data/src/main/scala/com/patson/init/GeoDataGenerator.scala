@@ -225,7 +225,13 @@ object GeoDataGenerator extends App {
 
     AirportSource.deleteAllAirports()
     AirportSource.saveAirports(airports)
-    AirportSource.saveCityAirportRelationships(cityAirportRelationships)
+    AirportSource.saveCityAirportRelationships(cityAirportRelationships.flatMap {
+      case (airport, relationships) =>
+        airports.find(_.iata == airport.iata).map { foundAirport =>
+          (foundAirport.id, relationships)
+        }
+      }
+    )
     
     saveAirportRunways(rawAirportResult, runwayResult, airports)
 
