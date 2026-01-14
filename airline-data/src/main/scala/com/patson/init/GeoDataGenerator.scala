@@ -239,7 +239,7 @@ object GeoDataGenerator extends App {
 
 
 
-  def generateAirportData(rawAirportResult : List[CsvAirport], runwayResult : Map[Int, List[Runway]], cities : List[City]) : (List[Airport], Map[Int, List[(City, Double)]]) = {
+  def generateAirportData(rawAirportResult : List[CsvAirport], runwayResult : Map[Int, List[Runway]], cities : List[City]) : (List[Airport], Map[Airport, List[(City, Double)]]) = {
     val removalAirportIatas = AdditionalLoader.loadRemovalAirportIatas()
 
     println(s">> ${removalAirportIatas.size} removal iatas")
