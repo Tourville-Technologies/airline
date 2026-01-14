@@ -43,7 +43,7 @@ object AirlineGenerator extends App {
     generateSmallCountryAirlines(List("JP","CA","TR","MX","VN"))
     generateRemoteAirlines(List("AU","CA","US","DK","RU"))
     generateAffinityAirlines(List("EU","Banking","Oil","Pharma","Electronics","Copper","Marine"))
-    generateAerospaceAirline()
+    // generateAerospaceAirline()
     generateSSTAirline()
     generateLatamAirline()
     generateArabiaAirline()
@@ -132,22 +132,22 @@ object AirlineGenerator extends App {
     })
   }
 
-  def generateAerospaceAirline(): Unit = {
-    val bases = airports.filter(_.zone.contains("Aerospace")).takeRight(11)
-    val toAirports = airports.filter(port => port.zone.contains("Aerospace") || port.zone.contains("Space") || port.zone.contains("Software") || port.size >= 7).distinct
-    val HQ = airports.find(_.iata == "TLS").getOrElse(bases.head)
-    println(HQ)
-    generateAirline(
-      s"Aerospace Rats",
-      s"Aerospace",
-      HQ,
-      bases,
-      toAirports,
-      List("Boeing 797-6", "Boeing 797-7", "Boeing 787-8 Dreamliner", "Boeing 787-9 Dreamliner"),
-      12000,
-      85
-    )
-  }
+  // def generateAerospaceAirline(): Unit = {
+  //   val bases = airports.filter(_.zone.contains("Aerospace")).takeRight(11)
+  //   val toAirports = airports.filter(port => port.zone.contains("Aerospace") || port.zone.contains("Space") || port.zone.contains("Software") || port.size >= 7).distinct
+  //   val HQ = airports.find(_.iata == "TLS").getOrElse(bases.head)
+  //   println(HQ)
+  //   generateAirline(
+  //     s"Aerospace Rats",
+  //     s"Aerospace",
+  //     HQ,
+  //     bases,
+  //     toAirports,
+  //     List("Boeing 797-6", "Boeing 797-7", "Boeing 787-8 Dreamliner", "Boeing 787-9 Dreamliner"),
+  //     12000,
+  //     85
+  //   )
+  // }
 
   def generateSSTAirline(): Unit = {
     val bases = airports.filter(airport => airport.iata == "ORD" || airport.iata == "SFO" || airport.iata == "BOS" || airport.iata == "FAI" || airport.iata == "ANC" || airport.iata == "BET")
