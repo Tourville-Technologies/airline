@@ -396,7 +396,7 @@ Model("McDonnell Douglas DC-9-30",	"DC-9",	115,	3,	0.75,	2.24,	804,	2778,	471673
 Model("McDonnell Douglas DC-9-50",	"DC-9",	139,	3,	0.68,	2.13,	804,	3030,	5429133,	1040,	4,	Manufacturer("McDonnell Douglas",	"US"),	2100,	"https://www.norebbo.com/dc-9-50-side-view/"),
 Model("McDonnell Douglas MD-11",	"DC-10",	410,	6,	4.48,	1.5,	886,	11963,	112662251,	1820,	24,	Manufacturer("McDonnell Douglas",	"US"),	3050,	"https://www.norebbo.com/mcdonnell-douglas-md-11-blank-illustration-templates-with-ge-engines/"),
 Model("McDonnell Douglas MD-81",	"DC-9",	161,	4,	0.62,	2.02,	830,	2600,	21705936,	1560,	12,	Manufacturer("McDonnell Douglas",	"US"),	2070,	"https://www.norebbo.com/2015/02/mcdonnell-douglas-md-80-blank-illustration-templates/"),
-Model("McDonnell Douglas MD-85",	"DC-9",	135,	4,	0.63,	2.15,	830,	2500,	17499047,	1560,	12,	Manufacturer("McDonnell Douglas",	"US"),	1840,	"https://www.norebbo.com/2015/02/mcdonnell-douglas-md-80-blank-illustration-templates/"),
+Model("McDonnell Douglas MD-87",	"DC-9",	135,	4,	0.63,	2.15,	830,	2500,	17499047,	1560,	12,	Manufacturer("McDonnell Douglas",	"US"),	1840,	"https://www.norebbo.com/2015/02/mcdonnell-douglas-md-80-blank-illustration-templates/"),
 Model("McDonnell Douglas MD-90",	"DC-9",	171,	5,	0.55,	2.14,	830,	1400,	35754719,	1560,	20,	Manufacturer("McDonnell Douglas",	"US"),	2134,	"https://www.norebbo.com/2018/02/mcdonnell-douglas-md-90-blank-illustration-templates/"),
 Model("McDonnell Douglas MD-90ER",	"DC-9",	163,	5,	0.8,	2.06,	830,	3300,	36568412,	1560,	20,	Manufacturer("McDonnell Douglas",	"US"),	2134,	"https://www.norebbo.com/2018/02/mcdonnell-douglas-md-90-blank-illustration-templates/"),
 Model("Mil Mi-26",	"Mil",	78,	0,	0.9,	2.7,	255,	870,	1275000,	780,	4,	Manufacturer("Mil",	"RU"),	1,	""),
