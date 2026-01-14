@@ -1,7 +1,7 @@
 # JVM Heap Settings
 # Set Xms equal to Xmx to avoid heap resizing pauses.
--J-Xmx8G
--J-Xms8G
+-J-Xmx4G
+-J-Xms4G
 
 # GC Settings for Max Throughput (Parallel Collector)
 -J-XX:+UseParallelGC
